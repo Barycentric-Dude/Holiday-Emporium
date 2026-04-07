@@ -1,0 +1,137 @@
+{
+  "project_name": "Sachin Travels / Holiday Emporium",
+  "theme_and_archetype": {
+    "theme": "LIGHT",
+    "archetype": "1 (Organic & Earthy)",
+    "reasoning": "The brand has a 35-year legacy of bespoke travel. An Organic & Earthy archetype conveys trust, warmth, and heritage. It avoids the clinical feel of tech sites and positions the brand as a high-end, immersive travel curator similar to Pelorus or The Outpost, allowing natural place imagery to shine."
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cormorant Garamond",
+      "body": "Manrope"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none font-medium",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-medium",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "overlines": "uppercase text-xs tracking-[0.2em] font-bold text-stone-500",
+      "body": "text-base leading-relaxed text-stone-600",
+      "small": "text-sm text-stone-500"
+    },
+    "rules": "Never use generic sans (Inter/Roboto) for headings. Headings must have an elegant editorial feel. Overlines must have wide letter spacing to establish scale."
+  },
+  "color_palette": {
+    "background": {
+      "default": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "muted": "#F5F5F4"
+    },
+    "text": {
+      "main": "#1C1917",
+      "muted": "#57534E",
+      "inverse": "#FAFAFA"
+    },
+    "brand": {
+      "primary": "#1E3F20",
+      "secondary": "#C17A58",
+      "accent": "#D4A373"
+    },
+    "border": "#E7E5E4",
+    "rules": "No pure #000000 or #808080. All grays must be tinted with warm stone/sand hues (Tailwind Stone palette). Primary (Deep Forest Green) used for key buttons and trust badges. Secondary (Terracotta) for hover states or special callouts."
+  },
+  "spacing_and_layout": {
+    "spacing_scale": "Use generous padding: p-12, p-16, p-24 for main sections. Allow elements to breathe.",
+    "grid_system": {
+      "mode": "Bento Grid Mode A (Tetris Grid) for Tour Categories",
+      "structure": "grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-8 lg:gap-12",
+      "items": "Asymmetrical spans. Large items span 8 cols, secondary span 4. Mix vertical and horizontal rectangles."
+    },
+    "container_rules": "Max width 7xl (max-w-7xl). Containers with borders must have internal padding (p-6 or p-8) to prevent text collision."
+  },
+  "surface_strategies": {
+    "header": "Crystal Glassmorphism: backdrop-blur-xl bg-white/70, 1px subtle white/20 border-b. Ensures nav text is readable when scrolling over hero.",
+    "cards": "Subtle roundness (max 8px border-radius), flat solid backgrounds for content areas, 1px stone-200 borders. Soft ambient shadow on hover (shadow-[0_8px_32px_rgba(0,0,0,0.06)]).",
+    "hero_overlay": "Max bg-black/30 or gradient overlay (from-black/60 to-transparent). The 3D background or image must remain clearly visible and vibrant.",
+    "story_section": "Use the story_texture_bg with background-size cover, adding a subtle noise overlay to give an editorial, high-end print feel."
+  },
+  "components": {
+    "forms": {
+      "strategy": "Shadcn Form, Input, Select. Customize inputs with background stone-50, border-stone-200, focus:border-primary focus:ring-1 focus:ring-primary. Labels must be clean and left-aligned."
+    },
+    "carousel": {
+      "strategy": "Shadcn Carousel or Embla. Full-bleed images with bottom gradient overlays so text overlay remains readable. Rounded corners (8px) for cards within the carousel."
+    },
+    "accordion": {
+      "strategy": "Shadcn Accordion for Day-by-Day itineraries. Clean 1px bottom border per item, elegant typography for day titles."
+    },
+    "icons": {
+      "library": "@phosphor-icons/react",
+      "style": "Duotone weight for marketing pages and trust indicators."
+    }
+  },
+  "three_d_and_motion": {
+    "hero_3d": {
+      "library": "react-three-fiber and @react-three/drei",
+      "concept": "A 3D hero with a toggle between 'Spiritual Trails' (Mode 1) and 'Adventure/Wildlife' (Mode 2). Mode 1 uses soft volumetric clouds and golden lighting. Mode 2 uses topographic terrain with deep green lighting. If 3D implementation is too complex, fallback to the high-res generated abstract background images."
+    },
+    "animations": {
+      "hover": "Smooth scale up (scale-105) for images inside overflow-hidden cards. Subtle Y-translation (-translate-y-1) for entire cards on hover.",
+      "scroll": "Use Lenis for smooth scrolling momentum."
+    }
+  },
+  "media": {
+    "hero_fallback_spiritual": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/12736aef-be45-437d-8d0e-4ed5d086849e/images/e3fb3cd48ef1b7b5f70423c87563a6e33d6547938ffbb24d831f38fdf3f5cb28.png",
+      "description": "Abstract 3D soft volumetric clouds, golden hour lighting."
+    },
+    "hero_fallback_adventure": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/12736aef-be45-437d-8d0e-4ed5d086849e/images/8960f6c25825394df05b8b2b3c5773bcc747738318dbbf3fe4955771eb28c110.png",
+      "description": "Abstract 3D topographic terrain map, forest green and sand colors."
+    },
+    "story_texture_bg": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/12736aef-be45-437d-8d0e-4ed5d086849e/images/ee6853a6c366125a3c4d6ba0f5d97809db5f9fe3d7e17f800001b8c66ba6841e.png",
+      "description": "Natural warm stone and fine sand grain texture for the 35 Years Story section."
+    },
+    "tour_category_spiritual": {
+      "url": "https://images.unsplash.com/photo-1745647912842-231631509cc2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB0ZW1wbGUlMjBhcmNoaXRlY3R1cmUlMjBzcGlyaXR1YWx8ZW58MHx8fHwxNzc1NTc1MTc4fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Indian temple with vibrant colors for Ashtavinayak / Spiritual trails."
+    },
+    "tour_category_wildlife": {
+      "url": "https://images.unsplash.com/photo-1761439737697-ca88ab66c29b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxCZW5nYWwlMjB0aWdlciUyMHNhZmFyaSUyMGZvcmVzdHxlbnwwfHx8fDE3NzU1NzUxNzh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Bengal tiger walking on dirt path for Tadoba Safari / Wildlife tours."
+    },
+    "tour_category_heritage": {
+      "url": "https://images.unsplash.com/photo-1661246709684-39a2d71856dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxSYWphc3RoYW4lMjBmb3J0JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3NTU3NTE5OHww&ixlib=rb-4.1.0&q=85",
+      "description": "Rajasthan fort architecture for Heritage Trails."
+    },
+    "tour_category_international": {
+      "url": "https://images.unsplash.com/photo-1728970381371-0be0d47151cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxEdWJhaSUyMHNreWxpbmUlMjBsdXh1cnklMjB0cmF2ZWx8ZW58MHx8fHwxNzc1NTc1MTc4fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dubai skyline for International Shopping / Dubai packages."
+    },
+    "carousel_asia_1": {
+      "url": "https://images.unsplash.com/photo-1657794419149-005cb23d2777?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxKYXBhbiUyMG1vdW50JTIwZnVqaSUyMGxhbmRzY2FwZXxlbnwwfHx8fDE3NzU1NzUxOTh8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Japan landscape for Explore Asia."
+    },
+    "carousel_asia_2": {
+      "url": "https://images.unsplash.com/photo-1656247203824-3d6f99461ba4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxCYWxpJTIwcmljZSUyMHRlcnJhY2VzfGVufDB8fHx8MTc3NTU3NTE5OHww&ixlib=rb-4.1.0&q=85",
+      "description": "Bali rice terraces for Explore Asia."
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 ratio for normal text. Use text shadows or dark gradients when overlaying text on images.",
+    "testing": "All interactive elements, buttons, form inputs, and accordions MUST have descriptive `data-testid` attributes (e.g., `data-testid='lead-form-submit'`)."
+  },
+  "special_features": {
+    "whatsapp_cta": "Floating fixed button at bottom-right. Subtle design using #25D366 or brand primary color.",
+    "sticky_quote": "A sticky bottom-left prompt or top bar for 'Request Custom Pune-Departure Quote'.",
+    "promotional_banner": "A top edge banner for '10% Off' with soft terracotta background and inverse text."
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the Archetype 1 (Organic & Earthy) color palette. Avoid default SaaS blues or clinical whites.",
+    "Implement the hero section with a mode toggle. Use react-three-fiber for the 3D backgrounds if possible, falling back to the provided high-res generated images.",
+    "Use the 'Bento Grid Mode A' for the Tour Categories to create a visually interesting, magazine-like layout.",
+    "Do not use generic HTML form elements; use Shadcn components properly styled to match the theme.",
+    "Embed the media URLs exactly as provided. DO NOT use placeholder image services.",
+    "Ensure all interactive elements have data-testid attributes."
+  ]
+}
