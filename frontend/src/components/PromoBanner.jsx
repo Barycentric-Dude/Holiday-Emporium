@@ -25,8 +25,9 @@ export default function PromoBanner() {
       </div>
       <button
         onClick={() => setVisible(false)}
-        className="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors"
+        className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2 z-[61]"
         data-testid="promo-close"
+        aria-label="Close promotion"
       >
         <X className="w-4 h-4" />
       </button>
