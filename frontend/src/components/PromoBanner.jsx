@@ -8,7 +8,7 @@ export default function PromoBanner() {
 
   return (
     <div
-      className="relative bg-[var(--brand-secondary)] text-white py-2.5 px-4 text-center z-[60]"
+      className="relative bg-[var(--brand-secondary)] text-white py-2.5 px-4 text-center z-40"
       data-testid="promo-banner"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
@@ -25,7 +25,7 @@ export default function PromoBanner() {
       </div>
       <button
         onClick={() => setVisible(false)}
-        className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2 z-[61]"
+        className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors p-2"
         data-testid="promo-close"
         aria-label="Close promotion"
       >
