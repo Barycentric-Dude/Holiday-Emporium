@@ -1,0 +1,645 @@
+{
+  "timestamp": "2026-04-10T04:58:54.734350",
+  "summary": {
+    "tests_run": 8,
+    "tests_passed": 8,
+    "success_rate": 100.0
+  },
+  "test_results": [
+    {
+      "name": "Root API Endpoint",
+      "method": "GET",
+      "endpoint": "",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "message": "Holiday Emporium API"
+      }
+    },
+    {
+      "name": "Get All Tours",
+      "method": "GET",
+      "endpoint": "tours",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "tours": [
+          {
+            "id": "ashtavinayak",
+            "slug": "ashtavinayak-yatra",
+            "title": "Divine Ashtavinayak Yatra",
+            "title_mr": "\u0926\u093f\u0935\u094d\u092f \u0905\u0937\u094d\u091f\u0935\u093f\u0928\u093e\u092f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e",
+            "category": "spiritual",
+            "duration": "2 Nights / 3 Days",
+            "price": "Starting from \u20b98,999 per person",
+            "tagline": "A spiritual journey covering Maharashtra's sacred Ganpati temples",
+            "description": "Embark on a sacred pilgrimage to all eight revered Ganpati temples of Maharashtra. This carefully curated 3-day journey takes you through the divine circuit of Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, and Ranjangaon.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/MP4.png",
+            "highlights": [
+              "AC Tempo Traveller",
+              "Darshan at all 8 temples",
+              "Breakfast & Dinner included",
+              "Experienced guide"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Pune - Morgaon - Siddhatek - Pali",
+                "details": "Early morning departure from Pune. Visit Shri Mayureshwar Temple at Morgaon, Shri Siddhi Vinayak at Siddhatek, and Shri Ballaleshwar at Pali. Overnight stay at Pali."
+              },
+              {
+                "day": "Day 2",
+                "title": "Mahad - Theur - Lenyadri",
+                "details": "After breakfast, visit Shri Varadvinayak at Mahad, Shri Chintamani at Theur, and Shri Girijatmaj at Lenyadri (requires climbing 300+ steps). Overnight stay near Ozar."
+              },
+              {
+                "day": "Day 3",
+                "title": "Ozar - Ranjangaon - Pune",
+                "details": "Morning darshan at Shri Vighnahar at Ozar and Shri Mahaganapati at Ranjangaon. Return to Pune by evening with divine blessings."
+              }
+            ]
+          },
+          {
+            "id": "tadoba",
+            "slug": "tadoba-tiger-safari",
+            "title": "The Roar of Tadoba",
+            "title_mr": "\u0924\u093e\u0921\u094b\u092c\u093e\u091a\u0940 \u0917\u0930\u094d\u091c\u0928\u093e",
+            "category": "wildlife",
+            "duration": "3 Nights / 4 Days",
+            "price": "Starting from \u20b914,999 per person",
+            "tagline": "Experience India's premier Tiger Reserve with expert-led safaris",
+            "description": "Discover the raw beauty of Tadoba Andhari Tiger Reserve, Maharashtra's largest and oldest national park. With one of India's highest tiger densities, every safari promises an unforgettable encounter with the wild.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Tadoba-1.png",
+            "highlights": [
+              "2 Jungle Safaris (Gypsy)",
+              "Resort accommodation",
+              "All meals included",
+              "Naturalist guide"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Pune/Mumbai - Tadoba",
+                "details": "Travel to Tadoba Andhari Tiger Reserve. Check-in at the jungle resort. Evening orientation about the park and wildlife."
+              },
+              {
+                "day": "Day 2",
+                "title": "Full Day Safari",
+                "details": "Early morning and afternoon safari in the core zone. Spot Royal Bengal Tigers, Leopards, Sloth Bears, Wild Dogs, and over 195 species of birds."
+              },
+              {
+                "day": "Day 3",
+                "title": "Safari & Buffer Zone",
+                "details": "Morning safari in the buffer zone. Afternoon at leisure or optional nature walk. Evening campfire and wildlife photography session."
+              },
+              {
+                "day": "Day 4",
+                "title": "Tadoba - Return",
+                "details": "Early morning birdwatching. After breakfast, check-out and return journey with memories of the wild."
+              }
+            ]
+          },
+          {
+            "id": "dubai",
+            "slug": "dubai-shopping-festival",
+            "title": "Shop the World: Dubai",
+            "title_mr": "\u0926\u0941\u092c\u0908 \u0936\u0949\u092a\u093f\u0902\u0917 \u092b\u0947\u0938\u094d\u091f\u093f\u0935\u094d\u0939\u0932",
+            "category": "international",
+            "duration": "4 Nights / 5 Days",
+            "price": "Starting from \u20b949,999 per person",
+            "tagline": "Curated shopping festivals, luxury stays, and iconic city tours",
+            "description": "Experience the glamour of Dubai with our carefully crafted package. From the towering Burj Khalifa to the gold-laden souks, from desert safaris to luxury mall shopping - this trip has it all.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome012.jpg",
+            "highlights": [
+              "4-star hotel stay",
+              "Desert Safari with BBQ dinner",
+              "Dhow Cruise",
+              "Dubai City Tour"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Arrival in Dubai",
+                "details": "Arrive at Dubai International Airport. Hotel check-in. Evening free for Dubai Mall visit and Burj Khalifa views."
+              },
+              {
+                "day": "Day 2",
+                "title": "Dubai City Tour",
+                "details": "Full day city tour covering Jumeirah Mosque, Palm Jumeirah, Atlantis, Dubai Frame, and Gold & Spice Souks. Evening Dhow Cruise dinner."
+              },
+              {
+                "day": "Day 3",
+                "title": "Desert Safari",
+                "details": "Morning at leisure for shopping at Mall of Emirates. Afternoon desert safari with dune bashing, camel riding, BBQ dinner with entertainment."
+              },
+              {
+                "day": "Day 4",
+                "title": "Abu Dhabi Day Trip",
+                "details": "Full day excursion to Abu Dhabi. Visit Sheikh Zayed Grand Mosque, Emirates Palace, and Yas Island. Return to Dubai."
+              },
+              {
+                "day": "Day 5",
+                "title": "Departure",
+                "details": "Last minute shopping at Global Village or Dubai Outlet Mall. Transfer to airport for return flight."
+              }
+            ]
+          },
+          {
+            "id": "singapore",
+            "slug": "singapore-experience",
+            "title": "Singapore Experience",
+            "title_mr": "\u0938\u093f\u0902\u0917\u093e\u092a\u0942\u0930 \u0905\u0928\u0941\u092d\u0935",
+            "category": "international",
+            "duration": "4 Nights / 5 Days",
+            "price": "Starting from \u20b954,999 per person",
+            "tagline": "The Lion City awaits with gardens, culture, and culinary delights",
+            "description": "Explore the vibrant city-state of Singapore. From the futuristic Gardens by the Bay to the cultural enclaves of Chinatown and Little India, experience a perfect blend of tradition and modernity.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome015.jpg",
+            "highlights": [
+              "Sentosa Island visit",
+              "Gardens by the Bay",
+              "Night Safari",
+              "Universal Studios"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Arrival & Marina Bay",
+                "details": "Arrive at Changi Airport. City orientation tour. Evening at Marina Bay Sands and Gardens by the Bay light show."
+              },
+              {
+                "day": "Day 2",
+                "title": "Sentosa Island",
+                "details": "Full day at Sentosa Island. Visit Universal Studios Singapore, S.E.A. Aquarium, and enjoy the beaches."
+              },
+              {
+                "day": "Day 3",
+                "title": "Cultural Tour",
+                "details": "Explore Chinatown, Little India, and Arab Street. Visit Merlion Park. Afternoon at Orchard Road for shopping."
+              },
+              {
+                "day": "Day 4",
+                "title": "Nature & Night Safari",
+                "details": "Morning at Singapore Botanic Gardens. Afternoon at leisure. Evening Night Safari experience."
+              },
+              {
+                "day": "Day 5",
+                "title": "Departure",
+                "details": "Morning free for last-minute shopping. Transfer to Changi Airport."
+              }
+            ]
+          },
+          {
+            "id": "konkan",
+            "slug": "konkan-coastal-retreat",
+            "title": "Konkan Coastal Retreat",
+            "title_mr": "\u0915\u094b\u0915\u0923 \u0915\u093f\u0928\u093e\u0930\u093e \u0938\u0939\u0932",
+            "category": "coastal",
+            "duration": "3 Nights / 4 Days",
+            "price": "Starting from \u20b911,999 per person",
+            "tagline": "Premium Konkan beaches, temples, and Malvani cuisine",
+            "description": "Escape to the pristine beaches of Konkan coast. From the white sands of Tarkarli to the historic Sindhudurg Fort, experience the untouched beauty of Maharashtra's coastline with authentic Malvani hospitality.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Nainital-9.png",
+            "highlights": [
+              "Scuba diving at Tarkarli",
+              "Sindhudurg Fort visit",
+              "Malvani cuisine",
+              "Beach camping"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Pune - Ganpatipule",
+                "details": "Depart from Pune. Visit the famous Ganpatipule Swayambhu Ganpati Temple. Evening at the pristine Ganpatipule Beach. Overnight stay."
+              },
+              {
+                "day": "Day 2",
+                "title": "Ganpatipule - Tarkarli",
+                "details": "Drive along the scenic Konkan coast to Tarkarli. En route visit Jaigad Fort. Evening at Tarkarli Beach with Malvani seafood dinner."
+              },
+              {
+                "day": "Day 3",
+                "title": "Tarkarli & Sindhudurg",
+                "details": "Morning scuba diving or snorkeling at Tarkarli. Afternoon boat ride to Sindhudurg Fort. Evening bonfire at beach campsite."
+              },
+              {
+                "day": "Day 4",
+                "title": "Return to Pune",
+                "details": "After breakfast, visit Vengurla Beach. Begin return journey to Pune via Amboli Ghat with scenic stops."
+              }
+            ]
+          },
+          {
+            "id": "corbett",
+            "slug": "jim-corbett-safari",
+            "title": "Jim Corbett Tiger Safari",
+            "title_mr": "\u091c\u093f\u092e \u0915\u0949\u0930\u094d\u092c\u0947\u091f \u0935\u093e\u0918 \u0938\u092b\u093e\u0930\u0940",
+            "category": "wildlife",
+            "duration": "3 Nights / 4 Days",
+            "price": "Starting from \u20b916,999 per person",
+            "tagline": "India's oldest national park and the heart of Project Tiger",
+            "description": "Journey to Jim Corbett National Park, established in 1936 as India's first national park. Home to the majestic Royal Bengal Tiger and set against the backdrop of the Himalayan foothills, this is a wildlife experience like no other.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Tadoba-3.png",
+            "highlights": [
+              "Jeep Safari in Dhikala Zone",
+              "Riverside resort stay",
+              "Bird watching",
+              "Corbett Museum visit"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Delhi - Corbett",
+                "details": "Drive from Delhi to Jim Corbett National Park (approx 6 hrs). Check-in at riverside resort. Evening nature walk along the Kosi River."
+              },
+              {
+                "day": "Day 2",
+                "title": "Dhikala Zone Safari",
+                "details": "Full day safari in the famous Dhikala zone. Spot Tigers, Elephants, Deer, and Gharials. Packed lunch in the park."
+              },
+              {
+                "day": "Day 3",
+                "title": "Bijrani Zone Safari",
+                "details": "Morning safari in Bijrani zone. Afternoon visit to Corbett Museum and Garjia Devi Temple. Evening at leisure."
+              },
+              {
+                "day": "Day 4",
+                "title": "Return to Delhi",
+                "details": "Early morning birdwatching. After breakfast, check-out and drive back to Delhi."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get Tours for ID",
+      "method": "GET",
+      "endpoint": "tours",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "tours": [
+          {
+            "id": "ashtavinayak",
+            "slug": "ashtavinayak-yatra",
+            "title": "Divine Ashtavinayak Yatra",
+            "title_mr": "\u0926\u093f\u0935\u094d\u092f \u0905\u0937\u094d\u091f\u0935\u093f\u0928\u093e\u092f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e",
+            "category": "spiritual",
+            "duration": "2 Nights / 3 Days",
+            "price": "Starting from \u20b98,999 per person",
+            "tagline": "A spiritual journey covering Maharashtra's sacred Ganpati temples",
+            "description": "Embark on a sacred pilgrimage to all eight revered Ganpati temples of Maharashtra. This carefully curated 3-day journey takes you through the divine circuit of Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, and Ranjangaon.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/MP4.png",
+            "highlights": [
+              "AC Tempo Traveller",
+              "Darshan at all 8 temples",
+              "Breakfast & Dinner included",
+              "Experienced guide"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Pune - Morgaon - Siddhatek - Pali",
+                "details": "Early morning departure from Pune. Visit Shri Mayureshwar Temple at Morgaon, Shri Siddhi Vinayak at Siddhatek, and Shri Ballaleshwar at Pali. Overnight stay at Pali."
+              },
+              {
+                "day": "Day 2",
+                "title": "Mahad - Theur - Lenyadri",
+                "details": "After breakfast, visit Shri Varadvinayak at Mahad, Shri Chintamani at Theur, and Shri Girijatmaj at Lenyadri (requires climbing 300+ steps). Overnight stay near Ozar."
+              },
+              {
+                "day": "Day 3",
+                "title": "Ozar - Ranjangaon - Pune",
+                "details": "Morning darshan at Shri Vighnahar at Ozar and Shri Mahaganapati at Ranjangaon. Return to Pune by evening with divine blessings."
+              }
+            ]
+          },
+          {
+            "id": "tadoba",
+            "slug": "tadoba-tiger-safari",
+            "title": "The Roar of Tadoba",
+            "title_mr": "\u0924\u093e\u0921\u094b\u092c\u093e\u091a\u0940 \u0917\u0930\u094d\u091c\u0928\u093e",
+            "category": "wildlife",
+            "duration": "3 Nights / 4 Days",
+            "price": "Starting from \u20b914,999 per person",
+            "tagline": "Experience India's premier Tiger Reserve with expert-led safaris",
+            "description": "Discover the raw beauty of Tadoba Andhari Tiger Reserve, Maharashtra's largest and oldest national park. With one of India's highest tiger densities, every safari promises an unforgettable encounter with the wild.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Tadoba-1.png",
+            "highlights": [
+              "2 Jungle Safaris (Gypsy)",
+              "Resort accommodation",
+              "All meals included",
+              "Naturalist guide"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Pune/Mumbai - Tadoba",
+                "details": "Travel to Tadoba Andhari Tiger Reserve. Check-in at the jungle resort. Evening orientation about the park and wildlife."
+              },
+              {
+                "day": "Day 2",
+                "title": "Full Day Safari",
+                "details": "Early morning and afternoon safari in the core zone. Spot Royal Bengal Tigers, Leopards, Sloth Bears, Wild Dogs, and over 195 species of birds."
+              },
+              {
+                "day": "Day 3",
+                "title": "Safari & Buffer Zone",
+                "details": "Morning safari in the buffer zone. Afternoon at leisure or optional nature walk. Evening campfire and wildlife photography session."
+              },
+              {
+                "day": "Day 4",
+                "title": "Tadoba - Return",
+                "details": "Early morning birdwatching. After breakfast, check-out and return journey with memories of the wild."
+              }
+            ]
+          },
+          {
+            "id": "dubai",
+            "slug": "dubai-shopping-festival",
+            "title": "Shop the World: Dubai",
+            "title_mr": "\u0926\u0941\u092c\u0908 \u0936\u0949\u092a\u093f\u0902\u0917 \u092b\u0947\u0938\u094d\u091f\u093f\u0935\u094d\u0939\u0932",
+            "category": "international",
+            "duration": "4 Nights / 5 Days",
+            "price": "Starting from \u20b949,999 per person",
+            "tagline": "Curated shopping festivals, luxury stays, and iconic city tours",
+            "description": "Experience the glamour of Dubai with our carefully crafted package. From the towering Burj Khalifa to the gold-laden souks, from desert safaris to luxury mall shopping - this trip has it all.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome012.jpg",
+            "highlights": [
+              "4-star hotel stay",
+              "Desert Safari with BBQ dinner",
+              "Dhow Cruise",
+              "Dubai City Tour"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Arrival in Dubai",
+                "details": "Arrive at Dubai International Airport. Hotel check-in. Evening free for Dubai Mall visit and Burj Khalifa views."
+              },
+              {
+                "day": "Day 2",
+                "title": "Dubai City Tour",
+                "details": "Full day city tour covering Jumeirah Mosque, Palm Jumeirah, Atlantis, Dubai Frame, and Gold & Spice Souks. Evening Dhow Cruise dinner."
+              },
+              {
+                "day": "Day 3",
+                "title": "Desert Safari",
+                "details": "Morning at leisure for shopping at Mall of Emirates. Afternoon desert safari with dune bashing, camel riding, BBQ dinner with entertainment."
+              },
+              {
+                "day": "Day 4",
+                "title": "Abu Dhabi Day Trip",
+                "details": "Full day excursion to Abu Dhabi. Visit Sheikh Zayed Grand Mosque, Emirates Palace, and Yas Island. Return to Dubai."
+              },
+              {
+                "day": "Day 5",
+                "title": "Departure",
+                "details": "Last minute shopping at Global Village or Dubai Outlet Mall. Transfer to airport for return flight."
+              }
+            ]
+          },
+          {
+            "id": "singapore",
+            "slug": "singapore-experience",
+            "title": "Singapore Experience",
+            "title_mr": "\u0938\u093f\u0902\u0917\u093e\u092a\u0942\u0930 \u0905\u0928\u0941\u092d\u0935",
+            "category": "international",
+            "duration": "4 Nights / 5 Days",
+            "price": "Starting from \u20b954,999 per person",
+            "tagline": "The Lion City awaits with gardens, culture, and culinary delights",
+            "description": "Explore the vibrant city-state of Singapore. From the futuristic Gardens by the Bay to the cultural enclaves of Chinatown and Little India, experience a perfect blend of tradition and modernity.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome015.jpg",
+            "highlights": [
+              "Sentosa Island visit",
+              "Gardens by the Bay",
+              "Night Safari",
+              "Universal Studios"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Arrival & Marina Bay",
+                "details": "Arrive at Changi Airport. City orientation tour. Evening at Marina Bay Sands and Gardens by the Bay light show."
+              },
+              {
+                "day": "Day 2",
+                "title": "Sentosa Island",
+                "details": "Full day at Sentosa Island. Visit Universal Studios Singapore, S.E.A. Aquarium, and enjoy the beaches."
+              },
+              {
+                "day": "Day 3",
+                "title": "Cultural Tour",
+                "details": "Explore Chinatown, Little India, and Arab Street. Visit Merlion Park. Afternoon at Orchard Road for shopping."
+              },
+              {
+                "day": "Day 4",
+                "title": "Nature & Night Safari",
+                "details": "Morning at Singapore Botanic Gardens. Afternoon at leisure. Evening Night Safari experience."
+              },
+              {
+                "day": "Day 5",
+                "title": "Departure",
+                "details": "Morning free for last-minute shopping. Transfer to Changi Airport."
+              }
+            ]
+          },
+          {
+            "id": "konkan",
+            "slug": "konkan-coastal-retreat",
+            "title": "Konkan Coastal Retreat",
+            "title_mr": "\u0915\u094b\u0915\u0923 \u0915\u093f\u0928\u093e\u0930\u093e \u0938\u0939\u0932",
+            "category": "coastal",
+            "duration": "3 Nights / 4 Days",
+            "price": "Starting from \u20b911,999 per person",
+            "tagline": "Premium Konkan beaches, temples, and Malvani cuisine",
+            "description": "Escape to the pristine beaches of Konkan coast. From the white sands of Tarkarli to the historic Sindhudurg Fort, experience the untouched beauty of Maharashtra's coastline with authentic Malvani hospitality.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Nainital-9.png",
+            "highlights": [
+              "Scuba diving at Tarkarli",
+              "Sindhudurg Fort visit",
+              "Malvani cuisine",
+              "Beach camping"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Pune - Ganpatipule",
+                "details": "Depart from Pune. Visit the famous Ganpatipule Swayambhu Ganpati Temple. Evening at the pristine Ganpatipule Beach. Overnight stay."
+              },
+              {
+                "day": "Day 2",
+                "title": "Ganpatipule - Tarkarli",
+                "details": "Drive along the scenic Konkan coast to Tarkarli. En route visit Jaigad Fort. Evening at Tarkarli Beach with Malvani seafood dinner."
+              },
+              {
+                "day": "Day 3",
+                "title": "Tarkarli & Sindhudurg",
+                "details": "Morning scuba diving or snorkeling at Tarkarli. Afternoon boat ride to Sindhudurg Fort. Evening bonfire at beach campsite."
+              },
+              {
+                "day": "Day 4",
+                "title": "Return to Pune",
+                "details": "After breakfast, visit Vengurla Beach. Begin return journey to Pune via Amboli Ghat with scenic stops."
+              }
+            ]
+          },
+          {
+            "id": "corbett",
+            "slug": "jim-corbett-safari",
+            "title": "Jim Corbett Tiger Safari",
+            "title_mr": "\u091c\u093f\u092e \u0915\u0949\u0930\u094d\u092c\u0947\u091f \u0935\u093e\u0918 \u0938\u092b\u093e\u0930\u0940",
+            "category": "wildlife",
+            "duration": "3 Nights / 4 Days",
+            "price": "Starting from \u20b916,999 per person",
+            "tagline": "India's oldest national park and the heart of Project Tiger",
+            "description": "Journey to Jim Corbett National Park, established in 1936 as India's first national park. Home to the majestic Royal Bengal Tiger and set against the backdrop of the Himalayan foothills, this is a wildlife experience like no other.",
+            "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Tadoba-3.png",
+            "highlights": [
+              "Jeep Safari in Dhikala Zone",
+              "Riverside resort stay",
+              "Bird watching",
+              "Corbett Museum visit"
+            ],
+            "itinerary": [
+              {
+                "day": "Day 1",
+                "title": "Delhi - Corbett",
+                "details": "Drive from Delhi to Jim Corbett National Park (approx 6 hrs). Check-in at riverside resort. Evening nature walk along the Kosi River."
+              },
+              {
+                "day": "Day 2",
+                "title": "Dhikala Zone Safari",
+                "details": "Full day safari in the famous Dhikala zone. Spot Tigers, Elephants, Deer, and Gharials. Packed lunch in the park."
+              },
+              {
+                "day": "Day 3",
+                "title": "Bijrani Zone Safari",
+                "details": "Morning safari in Bijrani zone. Afternoon visit to Corbett Museum and Garjia Devi Temple. Evening at leisure."
+              },
+              {
+                "day": "Day 4",
+                "title": "Return to Delhi",
+                "details": "Early morning birdwatching. After breakfast, check-out and drive back to Delhi."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get Single Tour (ashtavinayak)",
+      "method": "GET",
+      "endpoint": "tours/ashtavinayak",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "id": "ashtavinayak",
+        "slug": "ashtavinayak-yatra",
+        "title": "Divine Ashtavinayak Yatra",
+        "title_mr": "\u0926\u093f\u0935\u094d\u092f \u0905\u0937\u094d\u091f\u0935\u093f\u0928\u093e\u092f\u0915 \u092f\u093e\u0924\u094d\u0930\u093e",
+        "category": "spiritual",
+        "duration": "2 Nights / 3 Days",
+        "price": "Starting from \u20b98,999 per person",
+        "tagline": "A spiritual journey covering Maharashtra's sacred Ganpati temples",
+        "description": "Embark on a sacred pilgrimage to all eight revered Ganpati temples of Maharashtra. This carefully curated 3-day journey takes you through the divine circuit of Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, and Ranjangaon.",
+        "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/MP4.png",
+        "highlights": [
+          "AC Tempo Traveller",
+          "Darshan at all 8 temples",
+          "Breakfast & Dinner included",
+          "Experienced guide"
+        ],
+        "itinerary": [
+          {
+            "day": "Day 1",
+            "title": "Pune - Morgaon - Siddhatek - Pali",
+            "details": "Early morning departure from Pune. Visit Shri Mayureshwar Temple at Morgaon, Shri Siddhi Vinayak at Siddhatek, and Shri Ballaleshwar at Pali. Overnight stay at Pali."
+          },
+          {
+            "day": "Day 2",
+            "title": "Mahad - Theur - Lenyadri",
+            "details": "After breakfast, visit Shri Varadvinayak at Mahad, Shri Chintamani at Theur, and Shri Girijatmaj at Lenyadri (requires climbing 300+ steps). Overnight stay near Ozar."
+          },
+          {
+            "day": "Day 3",
+            "title": "Ozar - Ranjangaon - Pune",
+            "details": "Morning darshan at Shri Vighnahar at Ozar and Shri Mahaganapati at Ranjangaon. Return to Pune by evening with divine blessings."
+          }
+        ]
+      }
+    },
+    {
+      "name": "Create Lead",
+      "method": "POST",
+      "endpoint": "leads",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "success": true,
+        "message": "Thank you! We will contact you soon.",
+        "lead_id": "f03016f4-7554-4de1-8196-6a0405379eb4"
+      }
+    },
+    {
+      "name": "Get All Leads",
+      "method": "GET",
+      "endpoint": "leads",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "leads": [
+          {
+            "id": "f03016f4-7554-4de1-8196-6a0405379eb4",
+            "first_name": "Test",
+            "last_name": "User",
+            "phone": "+91 9876543210",
+            "email": "test_045854@example.com",
+            "package_interest": "Ashtavinayak Yatra",
+            "message": "Test lead submission",
+            "created_at": "2026-04-10T04:58:54.370137+00:00"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get Invalid Tour",
+      "method": "GET",
+      "endpoint": "tours/invalid-id",
+      "expected_status": 404,
+      "actual_status": 404,
+      "success": true,
+      "response_data": {
+        "detail": "Tour not found"
+      }
+    },
+    {
+      "name": "Create Invalid Lead",
+      "method": "POST",
+      "endpoint": "leads",
+      "expected_status": 422,
+      "actual_status": 422,
+      "success": true,
+      "response_data": {
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "body"
+            ],
+            "msg": "Field required",
+            "input": null,
+            "url": "https://errors.pydantic.dev/2.12/v/missing"
+          }
+        ]
+      }
+    }
+  ]
+}
