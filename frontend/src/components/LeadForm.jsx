@@ -40,7 +40,7 @@ export default function LeadForm() {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-[var(--brand-muted-bg)]" data-testid="lead-form-section">
+    <section id="contact" className="py-12 sm:py-20 lg:py-28 pb-24 sm:pb-20 bg-[var(--brand-muted-bg)]" data-testid="lead-form-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left: Info */}

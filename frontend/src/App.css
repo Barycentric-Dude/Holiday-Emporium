@@ -141,13 +141,9 @@
   max-width: 320px;
 }
 
-@media (max-width: 768px) {
-  .sticky-cta {
-    bottom: 80px;
-    left: 12px;
-    right: 12px;
-    max-width: none;
-  }
+/* Safe bottom spacing for mobile sticky bar */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* Section reveal animation */

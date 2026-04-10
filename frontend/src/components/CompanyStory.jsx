@@ -9,7 +9,7 @@ const STATS = [
 
 export default function CompanyStory() {
   return (
-    <section id="story" className="relative py-20 lg:py-28 overflow-hidden" data-testid="company-story">
+    <section id="story" className="relative py-12 sm:py-20 lg:py-28 overflow-hidden" data-testid="company-story">
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"

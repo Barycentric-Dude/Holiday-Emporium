@@ -63,9 +63,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 sm:pt-0">
         {/* Mode Toggle */}
-        <div className={`flex justify-center mb-10 ${loaded ? 'animate-fade-in' : 'opacity-0'}`}>
+        <div className={`flex justify-center mb-6 sm:mb-10 ${loaded ? 'animate-fade-in' : 'opacity-0'}`}>
           <div className="mode-toggle" data-testid="hero-mode-toggle">
             {MODES.map((m, i) => (
               <button
@@ -74,9 +74,10 @@ export default function HeroSection() {
                 className={activeMode === i ? 'active' : ''}
                 data-testid={`hero-toggle-${m.key}`}
               >
-                <span className="flex items-center gap-1.5">
-                  <m.icon className="w-4 h-4" />
-                  {m.label}
+                <span className="flex items-center gap-1.5 text-xs sm:text-sm">
+                  <m.icon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span className="hidden sm:inline">{m.label}</span>
+                  <span className="sm:hidden">{m.key === 'spiritual' ? 'Spiritual' : 'Adventure'}</span>
                 </span>
               </button>
             ))}
@@ -85,7 +86,7 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1
-          className={`text-4xl sm:text-5xl lg:text-7xl font-medium text-white tracking-tight leading-none mb-6 font-['Cormorant_Garamond',serif] ${loaded ? 'animate-fade-in-up' : 'opacity-0'}`}
+          className={`text-3xl sm:text-5xl lg:text-7xl font-medium text-white tracking-tight leading-tight sm:leading-none mb-4 sm:mb-6 font-['Cormorant_Garamond',serif] ${loaded ? 'animate-fade-in-up' : 'opacity-0'}`}
           data-testid="hero-headline"
         >
           {mode.headline}
@@ -93,35 +94,35 @@ export default function HeroSection() {
 
         {/* Subline */}
         <p
-          className={`text-base sm:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-light ${loaded ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}
+          className={`text-sm sm:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-8 sm:mb-10 font-light px-2 ${loaded ? 'animate-fade-in-up stagger-2' : 'opacity-0'}`}
           data-testid="hero-subline"
         >
           {mode.subline}
         </p>
 
         {/* CTAs */}
-        <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 ${loaded ? 'animate-fade-in-up stagger-3' : 'opacity-0'}`}>
+        <div className={`flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 ${loaded ? 'animate-fade-in-up stagger-3' : 'opacity-0'}`}>
           <button
             onClick={() => scrollToSection('#packages')}
-            className="px-8 py-3.5 bg-[var(--brand-primary)] text-white font-semibold rounded-full text-sm tracking-wide hover:bg-[var(--brand-primary)]/90 transition-all hover:scale-105"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 bg-[var(--brand-primary)] text-white font-semibold rounded-full text-sm tracking-wide hover:bg-[var(--brand-primary)]/90 transition-all hover:scale-105"
             data-testid="hero-cta-primary"
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center justify-center gap-2">
               <Compass className="w-4 h-4" />
               {mode.cta}
             </span>
           </button>
           <button
             onClick={() => scrollToSection('#contact')}
-            className="px-8 py-3.5 border border-white/40 text-white font-semibold rounded-full text-sm tracking-wide hover:bg-white/10 transition-all"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 border border-white/40 text-white font-semibold rounded-full text-sm tracking-wide hover:bg-white/10 transition-all"
             data-testid="hero-cta-secondary"
           >
             Request Custom Quote
           </button>
         </div>
 
-        {/* Scroll indicator */}
-        <div className={`mt-16 ${loaded ? 'animate-fade-in stagger-5' : 'opacity-0'}`}>
+        {/* Scroll indicator - hidden on very small screens */}
+        <div className={`mt-8 sm:mt-16 hidden sm:block ${loaded ? 'animate-fade-in stagger-5' : 'opacity-0'}`}>
           <div className="w-6 h-10 border-2 border-white/40 rounded-full mx-auto flex justify-center">
             <div className="w-1.5 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
           </div>

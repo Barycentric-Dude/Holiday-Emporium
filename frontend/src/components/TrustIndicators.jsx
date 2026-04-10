@@ -29,9 +29,9 @@ const INDICATORS = [
 
 export default function TrustIndicators() {
   return (
-    <section className="py-20 lg:py-28 bg-white" data-testid="trust-indicators">
+    <section className="py-12 sm:py-20 lg:py-28 bg-white" data-testid="trust-indicators">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 sm:mb-14">
           <p className="overline mb-3">Why Choose Us</p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[var(--brand-text)] tracking-tight">
             Trusted by Thousands of Travelers

@@ -63,10 +63,10 @@ export default function TourCategories() {
   }, []);
 
   return (
-    <section id="tours" className="py-20 lg:py-28 bg-[var(--brand-bg)]" ref={sectionRef} data-testid="tour-categories">
+    <section id="tours" className="py-12 sm:py-20 lg:py-28 bg-[var(--brand-bg)]" ref={sectionRef} data-testid="tour-categories">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-14 reveal">
+        <div className="text-center mb-8 sm:mb-14 reveal">
           <p className="overline mb-3">Explore Our World</p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[var(--brand-text)] tracking-tight">
             Explore Our Most Loved Journeys

@@ -37,8 +37,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2" data-testid="navbar-logo">
-            <div className={`font-bold text-xl lg:text-2xl font-['Cormorant_Garamond',serif] tracking-tight transition-colors ${scrolled ? 'text-[var(--brand-primary)]' : 'text-white'}`}>
+          <a href="#home" className="flex items-center gap-2 flex-shrink-0" data-testid="navbar-logo">
+            <div className={`font-bold text-lg sm:text-xl lg:text-2xl font-['Cormorant_Garamond',serif] tracking-tight transition-colors ${scrolled ? 'text-[var(--brand-primary)]' : 'text-white'}`}>
               Holiday <span className="text-[var(--brand-accent)]">Emporium</span>
             </div>
           </a>

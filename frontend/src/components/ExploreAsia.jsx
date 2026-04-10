@@ -13,8 +13,8 @@ export default function ExploreAsia() {
   const doubled = [...DESTINATIONS, ...DESTINATIONS];
 
   return (
-    <section id="explore-asia" className="py-20 lg:py-28 bg-[var(--brand-bg)] overflow-hidden" data-testid="explore-asia">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <section id="explore-asia" className="py-12 sm:py-20 lg:py-28 bg-[var(--brand-bg)] overflow-hidden" data-testid="explore-asia">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
         <div className="text-center">
           <p className="overline mb-3">Discover the World</p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[var(--brand-text)] tracking-tight">
@@ -28,14 +28,14 @@ export default function ExploreAsia() {
 
       {/* Infinite scroll carousel */}
       <div className="relative" data-testid="asia-carousel">
-        <div className="flex carousel-scroll" style={{ width: `${doubled.length * 320}px` }}>
+        <div className="flex carousel-scroll" style={{ width: `${doubled.length * 280}px` }}>
           {doubled.map((dest, i) => (
             <div
               key={`${dest.name}-${i}`}
-              className="flex-shrink-0 w-72 mx-3 group cursor-pointer"
+              className="flex-shrink-0 w-56 sm:w-72 mx-2 sm:mx-3 group cursor-pointer"
               data-testid={`asia-dest-${dest.name.toLowerCase()}-${i}`}
             >
-              <div className="relative h-96 rounded-lg overflow-hidden">
+              <div className="relative h-72 sm:h-96 rounded-lg overflow-hidden">
                 <img
                   src={dest.image}
                   alt={dest.name}

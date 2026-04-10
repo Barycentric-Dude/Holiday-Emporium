@@ -20,10 +20,10 @@ export default function FeaturedPackages() {
   const filtered = filter === 'all' ? tours : tours.filter((t) => t.category === filter);
 
   return (
-    <section id="packages" className="py-20 lg:py-28 bg-[var(--brand-muted-bg)]" data-testid="featured-packages">
+    <section id="packages" className="py-12 sm:py-20 lg:py-28 bg-[var(--brand-muted-bg)]" data-testid="featured-packages">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8 sm:mb-10">
           <p className="overline mb-3">Curated Experiences</p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[var(--brand-text)] tracking-tight">
             Featured Travel Packages
@@ -31,7 +31,7 @@ export default function FeaturedPackages() {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12" data-testid="package-filters">
+        <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-12" data-testid="package-filters">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -96,14 +96,14 @@ export default function FeaturedPackages() {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[var(--brand-primary)]">{tour.price}</span>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs sm:text-sm font-bold text-[var(--brand-primary)] flex-shrink-0">{tour.price}</span>
                   <button
                     onClick={() => setSelectedTour(selectedTour === tour.id ? null : tour.id)}
-                    className="flex items-center gap-1 text-sm font-semibold text-[var(--brand-secondary)] hover:text-[var(--brand-primary)] transition-colors"
+                    className="flex items-center gap-1 text-xs sm:text-sm font-semibold text-[var(--brand-secondary)] hover:text-[var(--brand-primary)] transition-colors whitespace-nowrap"
                     data-testid={`view-itinerary-${tour.id}`}
                   >
-                    View Itinerary <ChevronRight className="w-4 h-4" />
+                    Itinerary <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
               </div>
