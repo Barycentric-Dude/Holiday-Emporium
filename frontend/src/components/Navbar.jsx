@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, MapPin } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Menu, Phone, MapPin } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '../components/ui/sheet';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Tours', href: '#tours' },
-  { label: 'Packages', href: '#packages' },
-  { label: 'Explore Asia', href: '#explore-asia' },
-  { label: 'Our Story', href: '#story' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/', type: 'route' },
+  { label: 'Tours', href: '#tours', type: 'hash' },
+  { label: 'Packages', href: '#packages', type: 'hash' },
+  { label: 'Explore Asia', href: '#explore-asia', type: 'hash' },
+  { label: 'About Us', href: '/about', type: 'route' },
+  { label: 'Contact', href: '#contact', type: 'hash' },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -21,11 +24,32 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollTo = (href) => {
+  const handleNav = (link) => {
     setOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (link.type === 'route') {
+      navigate(link.href);
+      if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      // Hash link — if on home page, scroll. Otherwise, navigate to home first.
+      if (location.pathname === '/') {
+        const el = document.querySelector(link.href);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate('/' + link.href);
+      }
+    }
   };
+
+  const handleContactCTA = () => {
+    if (location.pathname === '/') {
+      const el = document.querySelector('#contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/#contact');
+    }
+  };
+
+  const isAboutPage = location.pathname === '/about';
 
   return (
     <header
@@ -37,20 +61,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 flex-shrink-0" data-testid="navbar-logo">
+          <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-2 flex-shrink-0" data-testid="navbar-logo">
             <div className={`font-bold text-lg sm:text-xl lg:text-2xl font-['Cormorant_Garamond',serif] tracking-tight transition-colors ${scrolled ? 'text-[var(--brand-primary)]' : 'text-white'}`}>
               Holiday <span className="text-[var(--brand-accent)]">Emporium</span>
             </div>
-          </a>
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8" data-testid="desktop-nav">
             {NAV_LINKS.map((link) => (
               <button
-                key={link.href}
-                onClick={() => scrollTo(link.href)}
+                key={link.label}
+                onClick={() => handleNav(link)}
                 className={`text-sm font-medium tracking-wide transition-colors hover:text-[var(--brand-accent)] ${
-                  scrolled ? 'text-[var(--brand-text)]' : 'text-white/90'
+                  (link.type === 'route' && location.pathname === link.href)
+                    ? 'text-[var(--brand-accent)]'
+                    : scrolled ? 'text-[var(--brand-text)]' : 'text-white/90'
                 }`}
                 data-testid={`nav-link-${link.label.toLowerCase().replace(/\s/g, '-')}`}
               >
@@ -71,7 +97,7 @@ export default function Navbar() {
             </a>
 
             <button
-              onClick={() => scrollTo('#contact')}
+              onClick={handleContactCTA}
               className="hidden lg:block px-5 py-2.5 bg-[var(--brand-primary)] text-white text-sm font-semibold rounded-full hover:bg-[var(--brand-primary)]/90 transition-all"
               data-testid="navbar-cta"
             >
@@ -96,9 +122,13 @@ export default function Navbar() {
                   </div>
                   {NAV_LINKS.map((link) => (
                     <button
-                      key={link.href}
-                      onClick={() => scrollTo(link.href)}
-                      className="text-left py-3 text-lg font-medium text-[var(--brand-text)] hover:text-[var(--brand-primary)] border-b border-stone-100 transition-colors"
+                      key={link.label}
+                      onClick={() => handleNav(link)}
+                      className={`text-left py-3 text-lg font-medium border-b border-stone-100 transition-colors ${
+                        (link.type === 'route' && location.pathname === link.href)
+                          ? 'text-[var(--brand-primary)]'
+                          : 'text-[var(--brand-text)] hover:text-[var(--brand-primary)]'
+                      }`}
                       data-testid={`mobile-nav-${link.label.toLowerCase().replace(/\s/g, '-')}`}
                     >
                       {link.label}

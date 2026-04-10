@@ -1,32 +1,17 @@
 import "@/App.css";
-import PromoBanner from "./components/PromoBanner";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import TourCategories from "./components/TourCategories";
-import FeaturedPackages from "./components/FeaturedPackages";
-import ExploreAsia from "./components/ExploreAsia";
-import TrustIndicators from "./components/TrustIndicators";
-import CompanyStory from "./components/CompanyStory";
-import LeadForm from "./components/LeadForm";
-import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
-import StickyCTA from "./components/StickyCTA";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
     <div className="min-h-screen bg-[var(--brand-bg)]">
-      <PromoBanner />
-      <Navbar />
-      <HeroSection />
-      <TourCategories />
-      <FeaturedPackages />
-      <ExploreAsia />
-      <TrustIndicators />
-      <CompanyStory />
-      <LeadForm />
-      <Footer />
-      <WhatsAppButton />
-      <StickyCTA />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

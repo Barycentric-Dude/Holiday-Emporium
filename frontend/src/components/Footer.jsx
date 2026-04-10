@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Separator } from '../components/ui/separator';
 
@@ -8,6 +9,19 @@ const LINKS = {
 };
 
 export default function Footer() {
+  const navigate = useNavigate();
+
+  const handleLink = (link) => {
+    if (link === 'About Us') {
+      navigate('/about');
+      window.scrollTo(0, 0);
+    } else if (link === 'Contact Us') {
+      navigate('/#contact');
+    } else if (link === 'Our Story') {
+      navigate('/#story');
+    }
+  };
+
   return (
     <footer className="bg-[var(--brand-text)] text-stone-300 pb-16 md:pb-0" data-testid="footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -48,9 +62,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-sm text-stone-400 hover:text-[var(--brand-accent)] transition-colors">
+                    <button
+                      onClick={() => handleLink(link)}
+                      className="text-sm text-stone-400 hover:text-[var(--brand-accent)] transition-colors"
+                    >
                       {link}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
