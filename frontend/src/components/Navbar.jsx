@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Menu, Phone, MapPin } from 'lucide-react';
+import { Menu, Phone, MapPin, ChevronDown } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '../components/ui/sheet';
+
+const DOMESTIC_TOURS = [
+  { label: 'Ashtavinayak Yatra', href: '/tours/ashtavinayak' },
+];
 
 const NAV_LINKS = [
   { label: 'Home', href: '/', type: 'route' },
-  { label: 'Tours', href: '#tours', type: 'hash' },
+  { label: 'Tours', type: 'dropdown' },
   { label: 'Packages', href: '#packages', type: 'hash' },
   { label: 'Explore Asia', href: '#explore-asia', type: 'hash' },
   { label: 'About Us', href: '/about', type: 'route' },
@@ -15,6 +19,8 @@ const NAV_LINKS = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [toursOpen, setToursOpen] = useState(false);
+  const [mobileToursOpen, setMobileToursOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,11 +32,11 @@ export default function Navbar() {
 
   const handleNav = (link) => {
     setOpen(false);
+    setMobileToursOpen(false);
     if (link.type === 'route') {
       navigate(link.href);
       if (link.href === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      // Hash link — if on home page, scroll. Otherwise, navigate to home first.
+    } else if (link.type === 'hash') {
       if (location.pathname === '/') {
         const el = document.querySelector(link.href);
         if (el) el.scrollIntoView({ behavior: 'smooth' });
@@ -38,6 +44,13 @@ export default function Navbar() {
         navigate('/' + link.href);
       }
     }
+  };
+
+  const handleTourNav = (href) => {
+    setToursOpen(false);
+    setOpen(false);
+    setMobileToursOpen(false);
+    navigate(href);
   };
 
   const handleContactCTA = () => {
@@ -49,7 +62,7 @@ export default function Navbar() {
     }
   };
 
-  const isAboutPage = location.pathname === '/about';
+  const isTourPage = location.pathname.startsWith('/tours/');
 
   return (
     <header
@@ -69,20 +82,74 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8" data-testid="desktop-nav">
-            {NAV_LINKS.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => handleNav(link)}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-[var(--brand-accent)] ${
-                  (link.type === 'route' && location.pathname === link.href)
-                    ? 'text-[var(--brand-accent)]'
-                    : scrolled ? 'text-[var(--brand-text)]' : 'text-white/90'
-                }`}
-                data-testid={`nav-link-${link.label.toLowerCase().replace(/\s/g, '-')}`}
-              >
-                {link.label}
-              </button>
-            ))}
+            {NAV_LINKS.map((link) => {
+              if (link.type === 'dropdown') {
+                return (
+                  <div
+                    key={link.label}
+                    className="relative"
+                    onMouseEnter={() => setToursOpen(true)}
+                    onMouseLeave={() => setToursOpen(false)}
+                  >
+                    <button
+                      className={`text-sm font-medium tracking-wide transition-colors hover:text-[var(--brand-accent)] flex items-center gap-1 ${
+                        isTourPage
+                          ? 'text-[var(--brand-accent)]'
+                          : scrolled ? 'text-[var(--brand-text)]' : 'text-white/90'
+                      }`}
+                      data-testid="nav-link-tours"
+                    >
+                      {link.label}
+                      <ChevronDown className={`w-3.5 h-3.5 transition-transform ${toursOpen ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    {toursOpen && (
+                      <div className="absolute top-full left-0 pt-2 animate-fade-in" data-testid="tours-dropdown">
+                        <div className="bg-white rounded-lg shadow-xl border border-[var(--brand-border)] py-2 min-w-[220px]">
+                          <p className="px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[var(--brand-text-muted)]">
+                            Domestic Tours
+                          </p>
+                          {DOMESTIC_TOURS.map((tour) => (
+                            <button
+                              key={tour.href}
+                              onClick={() => handleTourNav(tour.href)}
+                              className={`w-full text-left px-4 py-2 text-sm hover:bg-[var(--brand-muted-bg)] transition-colors ${
+                                location.pathname === tour.href
+                                  ? 'text-[var(--brand-primary)] font-semibold'
+                                  : 'text-[var(--brand-text)]'
+                              }`}
+                              data-testid={`dropdown-${tour.label.toLowerCase().replace(/\s+/g, '-')}`}
+                            >
+                              {tour.label}
+                            </button>
+                          ))}
+                          <div className="border-t border-stone-100 mt-1 pt-1">
+                            <p className="px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[var(--brand-text-muted)]">
+                              International Tours
+                            </p>
+                            <p className="px-4 py-2 text-xs text-[var(--brand-text-muted)] italic">Coming soon...</p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <button
+                  key={link.label}
+                  onClick={() => handleNav(link)}
+                  className={`text-sm font-medium tracking-wide transition-colors hover:text-[var(--brand-accent)] ${
+                    (link.type === 'route' && location.pathname === link.href)
+                      ? 'text-[var(--brand-accent)]'
+                      : scrolled ? 'text-[var(--brand-text)]' : 'text-white/90'
+                  }`}
+                  data-testid={`nav-link-${link.label.toLowerCase().replace(/\s/g, '-')}`}
+                >
+                  {link.label}
+                </button>
+              );
+            })}
           </nav>
 
           {/* CTA + Mobile */}
@@ -120,20 +187,57 @@ export default function Navbar() {
                   <div className="font-bold text-2xl font-['Cormorant_Garamond',serif] text-[var(--brand-primary)] mb-8">
                     Holiday <span className="text-[var(--brand-accent)]">Emporium</span>
                   </div>
-                  {NAV_LINKS.map((link) => (
-                    <button
-                      key={link.label}
-                      onClick={() => handleNav(link)}
-                      className={`text-left py-3 text-lg font-medium border-b border-stone-100 transition-colors ${
-                        (link.type === 'route' && location.pathname === link.href)
-                          ? 'text-[var(--brand-primary)]'
-                          : 'text-[var(--brand-text)] hover:text-[var(--brand-primary)]'
-                      }`}
-                      data-testid={`mobile-nav-${link.label.toLowerCase().replace(/\s/g, '-')}`}
-                    >
-                      {link.label}
-                    </button>
-                  ))}
+
+                  {NAV_LINKS.map((link) => {
+                    if (link.type === 'dropdown') {
+                      return (
+                        <div key={link.label}>
+                          <button
+                            onClick={() => setMobileToursOpen(!mobileToursOpen)}
+                            className="w-full flex items-center justify-between py-3 text-lg font-medium text-[var(--brand-text)] border-b border-stone-100"
+                            data-testid="mobile-nav-tours"
+                          >
+                            <span className={isTourPage ? 'text-[var(--brand-primary)]' : ''}>Tours</span>
+                            <ChevronDown className={`w-4 h-4 transition-transform ${mobileToursOpen ? 'rotate-180' : ''}`} />
+                          </button>
+                          {mobileToursOpen && (
+                            <div className="pl-4 border-b border-stone-100 py-2 animate-fade-in">
+                              <p className="text-xs font-bold uppercase tracking-wider text-[var(--brand-text-muted)] mb-2">Domestic</p>
+                              {DOMESTIC_TOURS.map((tour) => (
+                                <button
+                                  key={tour.href}
+                                  onClick={() => handleTourNav(tour.href)}
+                                  className={`block w-full text-left py-2 text-base ${
+                                    location.pathname === tour.href
+                                      ? 'text-[var(--brand-primary)] font-semibold'
+                                      : 'text-[var(--brand-text-muted)]'
+                                  }`}
+                                  data-testid={`mobile-tour-${tour.label.toLowerCase().replace(/\s+/g, '-')}`}
+                                >
+                                  {tour.label}
+                                </button>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+                    return (
+                      <button
+                        key={link.label}
+                        onClick={() => handleNav(link)}
+                        className={`text-left py-3 text-lg font-medium border-b border-stone-100 transition-colors ${
+                          (link.type === 'route' && location.pathname === link.href)
+                            ? 'text-[var(--brand-primary)]'
+                            : 'text-[var(--brand-text)] hover:text-[var(--brand-primary)]'
+                        }`}
+                        data-testid={`mobile-nav-${link.label.toLowerCase().replace(/\s/g, '-')}`}
+                      >
+                        {link.label}
+                      </button>
+                    );
+                  })}
+
                   <div className="mt-8 flex items-center gap-2 text-sm text-[var(--brand-text-muted)]">
                     <MapPin className="w-4 h-4" />
                     <span>Pune, Maharashtra</span>
