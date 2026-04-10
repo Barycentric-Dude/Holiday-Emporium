@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import AshtavinayakPage from "./pages/AshtavinayakPage";
 import KeralaPage from "./pages/KeralaPage";
+import RajasthanPage from "./pages/RajasthanPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/tours/ashtavinayak" element={<AshtavinayakPage />} />
           <Route path="/tours/kerala" element={<KeralaPage />} />
+          <Route path="/tours/rajasthan" element={<RajasthanPage />} />
         </Routes>
       </BrowserRouter>
     </div>

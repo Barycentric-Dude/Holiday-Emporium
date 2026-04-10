@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '../components/ui/
 const DOMESTIC_TOURS = [
   { label: 'Ashtavinayak Yatra', href: '/tours/ashtavinayak' },
   { label: 'Kerala Kanyakumari', href: '/tours/kerala' },
+  { label: 'Rajasthan Mewad Marwad', href: '/tours/rajasthan' },
 ];
 
 const NAV_LINKS = [
