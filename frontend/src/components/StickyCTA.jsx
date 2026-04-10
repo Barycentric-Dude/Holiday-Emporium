@@ -15,8 +15,8 @@ export default function StickyCTA() {
     <div className="sticky-cta animate-fade-in-up" style={{ animationDelay: '2s' }} data-testid="sticky-cta">
       <div className="bg-white rounded-xl shadow-xl border border-[var(--brand-border)] p-4 relative">
         <button
-          onClick={() => setDismissed(true)}
-          className="absolute top-2 right-2 text-stone-400 hover:text-stone-600 transition-colors"
+          onClick={(e) => { e.stopPropagation(); setDismissed(true); }}
+          className="absolute top-2 right-2 text-stone-400 hover:text-stone-600 transition-colors z-10 p-1"
           data-testid="sticky-cta-close"
         >
           <X className="w-4 h-4" />

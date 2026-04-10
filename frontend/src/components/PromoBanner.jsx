@@ -8,7 +8,7 @@ export default function PromoBanner() {
 
   return (
     <div
-      className="relative bg-[var(--brand-secondary)] text-white py-2.5 px-4 text-center z-50"
+      className="relative bg-[var(--brand-secondary)] text-white py-2.5 px-4 text-center z-[60]"
       data-testid="promo-banner"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
