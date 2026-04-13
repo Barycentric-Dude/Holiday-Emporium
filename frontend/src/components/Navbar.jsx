@@ -7,6 +7,7 @@ const DOMESTIC_TOURS = [
   { label: 'Ashtavinayak Yatra', href: '/tours/ashtavinayak' },
   { label: 'Kerala Kanyakumari', href: '/tours/kerala' },
   { label: 'Rajasthan Mewad Marwad', href: '/tours/rajasthan' },
+  { label: 'Shimla Kullu Manali', href: '/tours/shimla-manali' },
 ];
 
 const NAV_LINKS = [
