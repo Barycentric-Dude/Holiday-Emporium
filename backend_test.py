@@ -246,7 +246,7 @@ def main():
     print(f"   Success Rate: {(tester.tests_passed/tester.tests_run*100):.1f}%")
     
     # Save detailed results
-    with open('/app/test_reports/backend_api_results.json', 'w') as f:
+    with open('/workspace/test_reports/backend_api_results.json', 'w') as f:
         json.dump({
             "timestamp": datetime.now().isoformat(),
             "summary": {
