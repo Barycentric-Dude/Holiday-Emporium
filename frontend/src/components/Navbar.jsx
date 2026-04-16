@@ -10,6 +10,12 @@ const DOMESTIC_TOURS = [
   { label: 'Shimla Kullu Manali', href: '/tours/shimla-manali' },
 ];
 
+const INTERNATIONAL_TOURS = [
+  { label: 'Bangkok Malaysia Singapore', href: '/tours/bangkok-malaysia-singapore' },
+  { label: 'Dubai', href: '/tours/dubai' },
+  { label: 'Sri Lanka With Maldives', href: '/tours/sri-lanka-maldives' },
+];
+
 const NAV_LINKS = [
   { label: 'Home', href: '/', type: 'route' },
   { label: 'Tours', type: 'dropdown' },
@@ -130,7 +136,20 @@ export default function Navbar() {
                             <p className="px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[var(--brand-text-muted)]">
                               International Tours
                             </p>
-                            <p className="px-4 py-2 text-xs text-[var(--brand-text-muted)] italic">Coming soon...</p>
+                            {INTERNATIONAL_TOURS.map((tour) => (
+                              <button
+                                key={tour.href}
+                                onClick={() => handleTourNav(tour.href)}
+                                className={`w-full text-left px-4 py-2 text-sm hover:bg-[var(--brand-muted-bg)] transition-colors ${
+                                  location.pathname === tour.href
+                                    ? 'text-[var(--brand-primary)] font-semibold'
+                                    : 'text-[var(--brand-text)]'
+                                }`}
+                                data-testid={`dropdown-${tour.label.toLowerCase().replace(/\s+/g, '-')}`}
+                              >
+                                {tour.label}
+                              </button>
+                            ))}
                           </div>
                         </div>
                       </div>
@@ -207,6 +226,21 @@ export default function Navbar() {
                             <div className="pl-4 border-b border-stone-100 py-2 animate-fade-in">
                               <p className="text-xs font-bold uppercase tracking-wider text-[var(--brand-text-muted)] mb-2">Domestic</p>
                               {DOMESTIC_TOURS.map((tour) => (
+                                <button
+                                  key={tour.href}
+                                  onClick={() => handleTourNav(tour.href)}
+                                  className={`block w-full text-left py-2 text-base ${
+                                    location.pathname === tour.href
+                                      ? 'text-[var(--brand-primary)] font-semibold'
+                                      : 'text-[var(--brand-text-muted)]'
+                                  }`}
+                                  data-testid={`mobile-tour-${tour.label.toLowerCase().replace(/\s+/g, '-')}`}
+                                >
+                                  {tour.label}
+                                </button>
+                              ))}
+                              <p className="text-xs font-bold uppercase tracking-wider text-[var(--brand-text-muted)] mt-3 mb-2">International</p>
+                              {INTERNATIONAL_TOURS.map((tour) => (
                                 <button
                                   key={tour.href}
                                   onClick={() => handleTourNav(tour.href)}

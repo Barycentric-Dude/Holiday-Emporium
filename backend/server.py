@@ -136,6 +136,45 @@ TOURS = [
         ]
     },
     {
+        "id": "bangkok-malaysia-singapore",
+        "slug": "bangkok-malaysia-singapore",
+        "title": "Bangkok Malaysia Singapore",
+        "title_mr": "बैंकॉक मलेशिया सिंगापुर",
+        "category": "international",
+        "duration": "4 to 15 Days",
+        "price": "Starting from ₹64,999 per person",
+        "tagline": "Four amazing destinations in one incredible journey",
+        "description": "Experience the best of Southeast Asia! From Singapore to Malaysia, Bangkok & Pattaya with multiple tour options from 4 to 15 days.",
+        "image": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?crop=entropy&cs=srgb&fm=jpg",
+        "highlights": ["Singapore City Tour", "Genting Highlands", "Pattaya Beaches", "Bangkok Temples", "Hong Kong Disneyland", "Macau Casinos"],
+        "variants": [
+            {"id": "bmsm", "name": "BMS Full", "duration": "11D/10N", "destinations": "Bangkok, Pattaya, Malaysia, Singapore"},
+            {"id": "bangkok_pattaya", "name": "Bangkok Pattaya", "duration": "7D/6N", "destinations": "Bangkok, Pattaya"},
+            {"id": "singapore_malaysia", "name": "Singapore Malaysia", "duration": "7D/6N", "destinations": "Singapore, Malaysia"},
+            {"id": "singapore", "name": "Singapore Only", "duration": "4D/3N", "destinations": "Singapore"},
+            {"id": "bmsm_alt", "name": "BMS Alternate", "duration": "8D/7N", "destinations": "Singapore, Malaysia, Bangkok, Pattaya"},
+            {"id": "bangkok_singapore", "name": "Bangkok Singapore", "duration": "7D/6N", "destinations": "Bangkok, Pattaya, Singapore"},
+            {"id": "hk_msm_bp", "name": "HK MSM BP", "duration": "15D/14N", "destinations": "Hong Kong, Macau, Malaysia, Singapore, Bangkok, Pattaya"},
+            {"id": "hk_msm", "name": "HK Malaysia Singapore", "duration": "9D/8N", "destinations": "Hong Kong, Malaysia, Singapore"},
+            {"id": "hongkong", "name": "Hong Kong", "duration": "4D/3N", "destinations": "Hong Kong, Macau"},
+            {"id": "hk_malaysia", "name": "HK Malaysia", "duration": "7D/6N", "destinations": "Hong Kong, Malaysia"},
+            {"id": "malaysia", "name": "Malaysia Only", "duration": "4D/3N", "destinations": "Malaysia (KL, Genting)"}
+        ],
+        "itinerary": [
+            {"day": "Day 1", "title": "Mumbai - Bangkok - Pattaya", "details": "Depart to Bangkok. Proceed to Pattaya. Evening Alcazar Show.", "stay": "Pattaya"},
+            {"day": "Day 2", "title": "Pattaya", "details": "Coral Island by Speed Boat, Parasailing, Glass bottom boat. Mini Siam. Thai Massage.", "stay": "Pattaya"},
+            {"day": "Day 3", "title": "Pattaya - Bangkok", "details": "Nong Nooch Village - Thai Cultural Show and Elephant Show. Chao Praya River Cruise dinner.", "stay": "Bangkok"},
+            {"day": "Day 4", "title": "Bangkok - Safari World", "details": "Safari World - Wild Life Safari, Marine Park, Orang Utan Boxing, Dolphins Show.", "stay": "Bangkok"},
+            {"day": "Day 5", "title": "Bangkok Temple Tour", "details": "Golden Buddha, Reclining Buddha, Principle Buddha. Baiyoke Sky Tower. Shopping.", "stay": "Bangkok"},
+            {"day": "Day 6", "title": "Bangkok - Genting Highlands", "details": "Flight to Kuala Lumpur. Proceed to Genting Highlands. Cable Car ride. Casino.", "stay": "Genting Highlands"},
+            {"day": "Day 7", "title": "Genting Highlands", "details": "Genting Highlands Theme Park - Monorail, Roller Coaster, Go Carting, Water Splash.", "stay": "Genting Highlands"},
+            {"day": "Day 8", "title": "Genting - Kuala Lumpur", "details": "KL City tour - Batu Caves, Petronas Twin Tower, KL Tower. Shopping.", "stay": "Kuala Lumpur"},
+            {"day": "Day 9", "title": "Kuala Lumpur - Singapore", "details": "Proceed to Singapore by bus. Night Safari.", "stay": "Singapore"},
+            {"day": "Day 10", "title": "Singapore", "details": "Jurong Bird Park. Sentosa Island - Wax Museum, Underwater World.", "stay": "Singapore"},
+            {"day": "Day 11", "title": "Singapore - Mumbai", "details": "Departure to Mumbai.", "stay": ""}
+        ]
+    },
+    {
         "id": "konkan",
         "slug": "konkan-coastal-retreat",
         "title": "Konkan Coastal Retreat",
@@ -171,6 +210,47 @@ TOURS = [
             {"day": "Day 2", "title": "Dhikala Zone Safari", "details": "Full day safari in the famous Dhikala zone. Spot Tigers, Elephants, Deer, and Gharials. Packed lunch in the park."},
             {"day": "Day 3", "title": "Bijrani Zone Safari", "details": "Morning safari in Bijrani zone. Afternoon visit to Corbett Museum and Garjia Devi Temple. Evening at leisure."},
             {"day": "Day 4", "title": "Return to Delhi", "details": "Early morning birdwatching. After breakfast, check-out and drive back to Delhi."}
+        ]
+    },
+    {
+        "id": "sri-lanka-maldives",
+        "slug": "sri-lanka-maldives",
+        "title": "Sri Lanka With Maldives",
+        "title_mr": "श्रीलंका और मालदीव",
+        "category": "international",
+        "duration": "6 Nights / 7 Days",
+        "price": "Starting from ₹59,999 per person",
+        "tagline": "Cultural immersion in Sri Lanka combined with Maldives luxury",
+        "description": "This itinerary offers a seamless blend of cultural exploration and tropical luxury, beginning in Colombo and moving into the scenic heart of Kandy. The second half transitions into pure relaxation in the Maldives — one of the world's most sought-after tropical destinations.",
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?crop=entropy&cs=srgb&fm=jpg",
+        "highlights": ["Pinnawala Elephant Orphanage", "Temple of the Tooth", "Nuwara Eliya Tea Estates", "Maldives Beach Resort"],
+        "itinerary": [
+            {"day": "Day 1", "title": "Mumbai - Colombo - Kandy", "details": "Depart to Colombo. En route visit Pinnawala Elephant Orphanage. Proceed to Kandy."},
+            {"day": "Day 2", "title": "Kandy City Tour", "details": "Visit Spice Garden, Gems Factory, Craft Centre, and Temple of the Tooth."},
+            {"day": "Day 3", "title": "Kandy - Nuwara Eliya", "details": "Proceed to Nuwara Eliya. En route visit Tea Estate, Tea Factory, and Sita Amman Temple."},
+            {"day": "Day 4", "title": "Nuwara Eliya - Colombo", "details": "Proceed to Colombo. City tour with Freedom Memorial, Museum, Beach, Shopping at ODEL."},
+            {"day": "Day 5", "title": "Colombo - Maldives", "details": "Depart to Male. Transfer to resort by speed boat. Day at leisure."},
+            {"day": "Day 6", "title": "Maldives - Leisure Day", "details": "Day free for relaxation. Optional water sports: Parasailing, Scuba diving, Fishing, Snorkeling."},
+            {"day": "Day 7", "title": "Maldives - Mumbai", "details": "Breakfast and departure to Mumbai. Tour ends."}
+        ]
+    },
+    {
+        "id": "dubai",
+        "slug": "dubai",
+        "title": "Dubai",
+        "title_mr": "दुबई",
+        "category": "international",
+        "duration": "3 Nights / 4 Days",
+        "price": "Starting from ₹39,999 per person",
+        "tagline": "Luxury, innovation, and cultural fusion in the heart of UAE",
+        "description": "Dubai is a city that truly exemplifies luxury, innovation, and cultural fusion. From iconic Burj Al Arab to desert safaris, gold souks to dhow cruises — experience the world's most exciting destination.",
+        "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=srgb&fm=jpg",
+        "highlights": ["Burj Al Arab", "Desert Safari", "Gold Souk", "Dhow Cruise"],
+        "itinerary": [
+            {"day": "Day 1", "title": "Mumbai - Dubai", "details": "Depart to Dubai. Arrival and transfer to hotel."},
+            {"day": "Day 2", "title": "Dubai City Tour", "details": "City tour - Burj Al Arab, Jumeira Mosque, Dubai Museum, Gold Souk, Spice Souk, Madinat Jumeirah. Evening Dhow Cruise with dinner."},
+            {"day": "Day 3", "title": "Dubai - Desert Safari", "details": "Free time for shopping. Afternoon Desert Safari with dune bashing, camel ride, belly dancing, and BBQ dinner."},
+            {"day": "Day 4", "title": "Dubai - Mumbai", "details": "Check out and departure to Mumbai. Tour ends."}
         ]
     }
 ]
