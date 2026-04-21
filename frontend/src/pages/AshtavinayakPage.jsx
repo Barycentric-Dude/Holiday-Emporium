@@ -29,8 +29,8 @@ const TEMPLES = [
 ];
 
 const EXTRA_STOPS = [
-  { name: 'Jejuri', description: 'A vibrant spiritual stop famous for Lord Khandoba and its iconic golden turmeric atmosphere.', image: 'https://images.unsplash.com/photo-1663089553004-2e5606d4304e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxNYWhhcmFzaHRyYSUyMHRlbXBsZSUyMHBpbGdyaW1hZ2UlMjBhbmNpZW50fGVufDB8fHx8MTc3NTgxMzcyMHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Alandi', description: "A peaceful pilgrimage town deeply connected to Sant Dnyaneshwar and Maharashtra's spiritual heritage.", image: 'https://images.unsplash.com/photo-1696241411557-ab5dccd51f63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwyfHxJbmRpYW4lMjBHYW5wYXRpJTIwdGVtcGxlJTIwTWFoYXJhc2h0cmF8ZW58MHx8fHwxNzc1ODEzNjg3fDA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Jejuri', description: 'A vibrant spiritual stop famous for Lord Khandoba and its iconic golden turmeric atmosphere.', image: '/images/temples/jejuri.jpg' },
+  { name: 'Alandi', description: "A peaceful pilgrimage town deeply connected to Sant Dnyaneshwar and Maharashtra's spiritual heritage.", image: '/images/temples/alandi.jpg' },
 ];
 
 const ITINERARY = [
