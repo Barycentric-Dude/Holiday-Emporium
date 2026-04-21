@@ -1,0 +1,57 @@
+CREATE TABLE IF NOT EXISTS leads (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100),
+    phone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    package_interest VARCHAR(100) NOT NULL,
+    message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS tours (
+    id VARCHAR(50) PRIMARY KEY,
+    slug VARCHAR(100) NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    title_mr VARCHAR(200),
+    category VARCHAR(50) NOT NULL,
+    duration VARCHAR(50),
+    price VARCHAR(100),
+    tagline VARCHAR(255),
+    description TEXT,
+    image VARCHAR(255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS tour_highlights (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tour_id VARCHAR(50) NOT NULL,
+    highlight_text VARCHAR(255) NOT NULL,
+    FOREIGN KEY (tour_id) REFERENCES tours(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS tour_itineraries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tour_id VARCHAR(50) NOT NULL,
+    day VARCHAR(20) NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    details TEXT,
+    stay VARCHAR(100),
+    FOREIGN KEY (tour_id) REFERENCES tours(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS tour_variants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tour_id VARCHAR(50) NOT NULL,
+    variant_id VARCHAR(50) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    duration VARCHAR(50),
+    destinations TEXT,
+    FOREIGN KEY (tour_id) REFERENCES tours(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

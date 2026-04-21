@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# /api/tours -> tours.php
+RewriteRule ^tours$ tours.php [L,QSA]
+
+# /api/tours/xyz -> tours.php?id=xyz
+RewriteRule ^tours/([a-zA-Z0-9_-]+)$ tours.php?id=$1 [L,QSA]
+
+# /api/leads -> leads.php
+RewriteRule ^leads$ leads.php [L,QSA]
