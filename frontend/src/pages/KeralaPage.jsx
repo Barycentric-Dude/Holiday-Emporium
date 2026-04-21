@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1766051224978-a57732014f9a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxLZXJhbGElMjBiYWNrd2F0ZXJzJTIwaG91c2Vib2F0JTIwdHJvcGljYWx8ZW58MHx8fHwxNzc1ODE0ODUyfDA&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://images.unsplash.com/photo-1719831738921-972e0ec76337?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxNdW5uYXIlMjB0ZWElMjBwbGFudGF0aW9uJTIwaGlsbHMlMjBJbmRpYXxlbnwwfHx8fDE3NzU4MTQ4NTJ8MA&ixlib=rb-4.1.0&q=85";
-const CTA_BG = "https://images.unsplash.com/photo-1589564974428-5766540caa67?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwzfHxLYW55YWt1bWFyaSUyMFZpdmVrYW5hbmRhJTIwcm9jayUyMG1lbW9yaWFsJTIwb2NlYW4lMjBzdW5yaXNlJTIwSW5kaWF8ZW58MHx8fHwxNzc1ODE0ODYxfDA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/kerala/alleppey.jpg";
+const ABOUT_IMG = "/images/kerala/munnar.jpg";
+const CTA_BG = "/images/kerala/kanyakumari.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '9N/10D or 7N/8D' },
@@ -18,13 +18,13 @@ const QUICK_INFO = [
 ];
 
 const DESTINATIONS = [
-  { name: 'Kanyakumari', desc: 'Witness sunrise & sunset at the southernmost tip of India. Visit Vivekananda Rock Memorial & Triveni Sangam.', icon: Sunrise, image: 'https://images.unsplash.com/photo-1773036221522-c99b359480b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwxfHxLYW55YWt1bWFyaSUyMFZpdmVrYW5hbmRhJTIwcm9jayUyMG1lbW9yaWFsJTIwb2NlYW4lMjBzdW5yaXNlJTIwSW5kaWF8ZW58MHx8fHwxNzc1ODE0ODYxfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Trivandrum', desc: 'Visit Padmanabhaswamy Temple, Velli Lake, and relax at the iconic Kovalam Beach.', icon: Landmark, image: 'https://images.unsplash.com/photo-1611514233518-c145a9add984?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAxODF8MHwxfHNlYXJjaHwyfHxLYW55YWt1bWFyaSUyMFZpdmVrYW5hbmRhJTIwcm9jayUyMG1lbW9yaWFsJTIwb2NlYW4lMjBzdW5yaXNlJTIwSW5kaWF8ZW58MHx8fHwxNzc1ODE0ODYxfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Alleppey', desc: 'Experience the famous backwater cruise on Vembanad Lake amidst serene tropical canals.', icon: Ship, image: 'https://images.unsplash.com/photo-1764012393137-54d0e01f25a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxLZXJhbGElMjBiYWNrd2F0ZXJzJTIwaG91c2Vib2F0JTIwdHJvcGljYWx8ZW58MHx8fHwxNzc1ODE0ODUyfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Periyar', desc: 'Explore wildlife with a boat ride in Periyar Lake. Home to elephants, tigers & exotic birds at 3,630ft.', icon: TreePine, image: 'https://images.unsplash.com/photo-1650884905385-8f4454767ea3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxNdW5uYXIlMjB0ZWElMjBwbGFudGF0aW9uJTIwaGlsbHMlMjBJbmRpYXxlbnwwfHx8fDE3NzU4MTQ4NTJ8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Munnar', desc: 'Tea gardens, Mattupetty Dam & Echo Point at 5,280ft. Spice plantations and misty hill views.', icon: Mountain, image: 'https://images.unsplash.com/photo-1650884986392-984358536050?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxNdW5uYXIlMjB0ZWElMjBwbGFudGF0aW9uJTIwaGlsbHMlMjBJbmRpYXxlbnwwfHx8fDE3NzU4MTQ4NTJ8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Guruvayur', desc: 'Darshan at the famous Lord Krishna temple, one of the most sacred shrines in South India.', icon: Landmark, image: 'https://images.unsplash.com/photo-1766483679308-d39bd11e796d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxLZXJhbGElMjBiYWNrd2F0ZXJzJTIwaG91c2Vib2F0JTIwdHJvcGljYWx8ZW58MHx8fHwxNzc1ODE0ODUyfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Cochin (Kochi)', desc: 'Harbor cruise, Chinese Fishing Nets, Dutch Palace, Synagogues & colonial heritage.', icon: Waves, image: 'https://images.unsplash.com/photo-1645680149311-5a00ae5a2b2a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxLb2NoaSUyMENoaW5lc2UlMjBmaXNoaW5nJTIwbmV0cyUyMGhhcmJvciUyMEtlcmFsYXxlbnwwfHx8fDE3NzU4MTQ4NjF8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Kanyakumari', desc: 'Witness sunrise & sunset at the southernmost tip of India. Visit Vivekananda Rock Memorial & Triveni Sangam.', icon: Sunrise, image: '/images/kerala/kanyakumari.jpg' },
+  { name: 'Trivandrum', desc: 'Visit Padmanabhaswamy Temple, Velli Lake, and relax at the iconic Kovalam Beach.', icon: Landmark, image: '/images/kerala/trivandrum.jpg' },
+  { name: 'Alleppey', desc: 'Experience the famous backwater cruise on Vembanad Lake amidst serene tropical canals.', icon: Ship, image: '/images/kerala/alleppey.jpg' },
+  { name: 'Periyar', desc: 'Explore wildlife with a boat ride in Periyar Lake. Home to elephants, tigers & exotic birds at 3,630ft.', icon: TreePine, image: '/images/kerala/periyar.jpg' },
+  { name: 'Munnar', desc: 'Tea gardens, Mattupetty Dam & Echo Point at 5,280ft. Spice plantations and misty hill views.', icon: Mountain, image: '/images/kerala/munnar.jpg' },
+  { name: 'Guruvayur', desc: 'Darshan at the famous Lord Krishna temple, one of the most sacred shrines in South India.', icon: Landmark, image: '/images/kerala/guruvayur.jpg' },
+  { name: 'Cochin (Kochi)', desc: 'Harbor cruise, Chinese Fishing Nets, Dutch Palace, Synagogues & colonial heritage.', icon: Waves, image: '/images/kerala/kochi.jpg' },
 ];
 
 const ITINERARY_10D = [

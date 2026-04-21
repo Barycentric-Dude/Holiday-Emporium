@@ -1,4 +1,4 @@
-const STORY_BG = "https://static.prod-images.emergentagent.com/jobs/12736aef-be45-437d-8d0e-4ed5d086849e/images/ee6853a6c366125a3c4d6ba0f5d97809db5f9fe3d7e17f800001b8c66ba6841e.png";
+const STORY_BG = "/images/rajasthan/udaipur.jpg";
 
 const STATS = [
   { number: '35+', label: 'Years Experience' },

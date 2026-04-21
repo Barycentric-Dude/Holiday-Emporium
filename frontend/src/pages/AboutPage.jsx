@@ -7,34 +7,34 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome013.jpg";
+const HERO_BG = "/images/rajasthan/udaipur.jpg";
 const FOUNDER_IMG = "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome011.jpg";
-const CTA_BG = "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome018.jpg";
+const CTA_BG = "/images/kerala/kanyakumari.jpg";
 
 const EXPERIENCES = [
   {
     icon: Compass,
     title: 'Spiritual Tours',
     description: 'Sacred pilgrimages including Ashtavinayak and Ayodhya – Varanasi.',
-    image: 'https://images.unsplash.com/photo-1745647912842-231631509cc2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB0ZW1wbGUlMjBhcmNoaXRlY3R1cmUlMjBzcGlyaXR1YWx8ZW58MHx8fHwxNzc1NTc1MTc4fDA&ixlib=rb-4.1.0&q=85',
+    image: '/images/temples/morgaon.jpg',
   },
   {
     icon: Trees,
     title: 'Wildlife Adventures',
     description: "Explore India's premier tiger reserves including Tadoba and Corbett.",
-    image: 'https://images.unsplash.com/photo-1761439737697-ca88ab66c29b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxCZW5nYWwlMjB0aWdlciUyMHNhZmFyaSUyMGZvcmVzdHxlbnwwfHx8fDE3NzU1NzUxNzh8MA&ixlib=rb-4.1.0&q=85',
+    image: '/images/rajasthan/ranthambore.jpg',
   },
   {
     icon: Mountain,
     title: 'Hill Stations',
     description: 'Discover scenic destinations like Ooty, Kerala, and Kashmir.',
-    image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Nainital-9.png',
+    image: '/images/shimla-manali/shimla.jpg',
   },
   {
     icon: Globe,
     title: 'International Tours',
     description: 'Experience global destinations including Dubai, Singapore, Bali and Europe.',
-    image: 'https://images.unsplash.com/photo-1728970381371-0be0d47151cb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHw0fHxEdWJhaSUyMHNreWxpbmUlMjBsdXh1cnklMjB0cmF2ZWx8ZW58MHx8fHwxNzc1NTc1MTc4fDA&ixlib=rb-4.1.0&q=85',
+    image: '/images/dubai/burj-khalifa.jpg',
   },
 ];
 

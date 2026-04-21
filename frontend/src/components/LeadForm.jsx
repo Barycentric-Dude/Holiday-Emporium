@@ -60,7 +60,7 @@ export default function LeadForm() {
 
             <div className="relative rounded-lg overflow-hidden shadow-xl">
               <img
-                src="https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/Nainital-9-1024x709.png"
+                src="/images/shimla-manali/shimla.jpg"
                 alt="Travel destinations"
                 className="w-full h-64 lg:h-72 object-cover"
                 loading="lazy"

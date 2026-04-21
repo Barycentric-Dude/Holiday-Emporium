@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1636996627212-ce5d24bca63a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHw0fHxSYWphc3RoYW4lMjBwYWxhY2UlMjBmb3J0JTIwSmFpcHVyJTIwSGF3YSUyME1haGFsfGVufDB8fHx8MTc3NTgxNjI2NHww&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://images.unsplash.com/photo-1710987759549-db4263464211?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxVZGFpcHVyJTIwbGFrZSUyMHBhbGFjZSUyMFJhamFzdGhhbnxlbnwwfHx8fDE3NzU4MTYyNjR8MA&ixlib=rb-4.1.0&q=85";
-const CTA_BG = "https://images.unsplash.com/photo-1730303558511-cbd9e6a4295e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxKYWlzYWxtZXIlMjBkZXNlcnQlMjBzYW5kJTIwZHVuZXMlMjBjYW1lbCUyMHN1bnNldHxlbnwwfHx8fDE3NzU4MTYyNjR8MA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/rajasthan/jaipur.jpg";
+const ABOUT_IMG = "/images/rajasthan/udaipur.jpg";
+const CTA_BG = "/images/rajasthan/jaisalmer.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '7 / 9 / 15 Days' },
@@ -18,15 +18,15 @@ const QUICK_INFO = [
 ];
 
 const DESTINATIONS = [
-  { name: 'Mount Abu', desc: 'Rajasthan\'s only hill station at 3,960ft. Nakki Lake boating, Dilwara Jain Temples & sunset views.', icon: Mountain, image: 'https://images.unsplash.com/photo-1661246709684-39a2d71856dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxSYWphc3RoYW4lMjBmb3J0JTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc3NTU3NTE5OHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Udaipur', desc: 'The City of Lakes. City Palace, Crystal Gallery, Sahelion ki Badi & romantic lake views.', icon: Crown, image: 'https://images.unsplash.com/photo-1622018135960-249abd263aeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxVZGFpcHVyJTIwbGFrZSUyMHBhbGFjZSUyMFJhamFzdGhhbnxlbnwwfHx8fDE3NzU4MTYyNjR8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Chittorgarh', desc: 'Rajput valor and sacrifice. Padmini Palace, Vijay Stambha & Kirti Stambha.', icon: Landmark, image: 'https://images.unsplash.com/photo-1582136283473-28db6e70ee3e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwzfHxSYWphc3RoYW4lMjBwYWxhY2UlMjBmb3J0JTIwSmFpcHVyJTIwSGF3YSUyME1haGFsfGVufDB8fHx8MTc3NTgxNjI2NHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Pushkar & Ajmer', desc: 'Sacred Brahma Mandir at Pushkar and the revered Khwaja Dargah at Ajmer.', icon: Compass, image: 'https://images.unsplash.com/photo-1675772120474-b9d7811220f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxVZGFpcHVyJTIwbGFrZSUyMHBhbGFjZSUyMFJhamFzdGhhbnxlbnwwfHx8fDE3NzU4MTYyNjR8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Ranthambore', desc: 'Thrilling wildlife safari in India\'s famous tiger reserve. Spot exotic jungle creatures.', icon: TreePine, image: 'https://images.unsplash.com/photo-1700562554203-5b8644512759?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwyfHxSYW50aGFtYm9yZSUyMHRpZ2VyJTIwc2FmYXJpJTIwbmF0aW9uYWwlMjBwYXJrJTIwSW5kaWF8ZW58MHx8fHwxNzc1ODE2MjczfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Jaipur', desc: 'The Pink City. Hawa Mahal, Amer Fort, City Palace, Jantar Mantar & Chokhi Dhani.', icon: Landmark, image: 'https://images.unsplash.com/photo-1662696938959-8e1dac3f1bd0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxSYWphc3RoYW4lMjBwYWxhY2UlMjBmb3J0JTIwSmFpcHVyJTIwSGF3YSUyME1haGFsfGVufDB8fHx8MTc3NTgxNjI2NHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Bikaner', desc: 'Desert grandeur. Junagad Fort, Lalgarh Palace & the unique Karni Mata Temple.', icon: Crown, image: 'https://images.unsplash.com/photo-1700756102943-fa388b2ed119?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxKYWlzYWxtZXIlMjBkZXNlcnQlMjBzYW5kJTIwZHVuZXMlMjBjYW1lbCUyMHN1bnNldHxlbnwwfHx8fDE3NzU4MTYyNjR8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Jaisalmer', desc: 'The Golden City. Jaisalmer Fort, Jain Temples, Gadisar Lake & Sam Sand Dunes.', icon: Tent, image: 'https://images.unsplash.com/photo-1730303557183-5478e66e22e4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxKYWlzYWxtZXIlMjBkZXNlcnQlMjBzYW5kJTIwZHVuZXMlMjBjYW1lbCUyMHN1bnNldHxlbnwwfHx8fDE3NzU4MTYyNjR8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Jodhpur', desc: 'The Blue City. Mehrangarh Fort, Umaid Bhawan Palace & vibrant bazaars.', icon: Camera, image: 'https://images.unsplash.com/photo-1714893520131-4fb6dd335e83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwxfHxKb2RocHVyJTIwYmx1ZSUyMGNpdHklMjBNZWhyYW5nYXJoJTIwZm9ydCUyMEluZGlhfGVufDB8fHx8MTc3NTgxNjI3Mnww&ixlib=rb-4.1.0&q=85' },
+  { name: 'Mount Abu', desc: 'Rajasthan\'s only hill station at 3,960ft. Nakki Lake boating, Dilwara Jain Temples & sunset views.', icon: Mountain, image: '/images/rajasthan/mount-abu.jpg' },
+  { name: 'Udaipur', desc: 'The City of Lakes. City Palace, Crystal Gallery, Sahelion ki Badi & romantic lake views.', icon: Crown, image: '/images/rajasthan/udaipur.jpg' },
+  { name: 'Chittorgarh', desc: 'Rajput valor and sacrifice. Padmini Palace, Vijay Stambha & Kirti Stambha.', icon: Landmark, image: '/images/rajasthan/chittorgarh.jpg' },
+  { name: 'Pushkar & Ajmer', desc: 'Sacred Brahma Mandir at Pushkar and the revered Khwaja Dargah at Ajmer.', icon: Compass, image: '/images/rajasthan/pushkar.jpg' },
+  { name: 'Ranthambore', desc: 'Thrilling wildlife safari in India\'s famous tiger reserve. Spot exotic jungle creatures.', icon: TreePine, image: '/images/rajasthan/ranthambore.jpg' },
+  { name: 'Jaipur', desc: 'The Pink City. Hawa Mahal, Amer Fort, City Palace, Jantar Mantar & Chokhi Dhani.', icon: Landmark, image: '/images/rajasthan/jaipur.jpg' },
+  { name: 'Bikaner', desc: 'Desert grandeur. Junagad Fort, Lalgarh Palace & the unique Karni Mata Temple.', icon: Crown, image: '/images/rajasthan/bikaner.jpg' },
+  { name: 'Jaisalmer', desc: 'The Golden City. Jaisalmer Fort, Jain Temples, Gadisar Lake & Sam Sand Dunes.', icon: Tent, image: '/images/rajasthan/jaisalmer.jpg' },
+  { name: 'Jodhpur', desc: 'The Blue City. Mehrangarh Fort, Umaid Bhawan Palace & vibrant bazaars.', icon: Camera, image: '/images/rajasthan/jodhpur.jpg' },
 ];
 
 const TOURS = {

@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxEdWJhaSUyMHNreWxpbmUlMjBuaWdodHxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxEdWJhaSUyMG11c2x1bSUyMGN1bHR1cmV8ZW58MHx8fHwxNzc1ODE0ODU4fDA&ixlib=rb-4.1.0&q=85";
-const CTA_BG = "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxEdWJhaSUyMGRlc2VydCUyMHNhZmFyaSUyMGR1bmVzfGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/dubai/burj-khalifa.jpg";
+const ABOUT_IMG = "/images/dubai/dubai-creek.jpg";
+const CTA_BG = "/images/dubai/desert-safari.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '3N/4D' },
@@ -18,12 +18,12 @@ const QUICK_INFO = [
 ];
 
 const DESTINATIONS = [
-  { name: 'Burj Al Arab', desc: 'The iconic sail-shaped hotel and symbol of Dubai\'s luxury. Photo stop at the world\'s most luxurious hotel.', icon: Building, image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxEdWJhaSUyMHNreWxpbmUlMjBuaWdodHxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Dubai Mall', desc: 'One of the world\'s largest shopping malls with Dubai Aquarium, ice rink, and endless entertainment.', icon: Camera, image: 'https://images.unsplash.com/photo-1545987796-200677ee1011?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxEdWJhaSUyMG1hbGwlMjBzaG9wcGluZ3xlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Desert Safari', desc: 'Thrilling dune bashing, camel rides, sandboarding, belly dancing, and BBQ dinner under the stars.', icon: Mountain, image: 'https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxEdWJhaSUyMGRlc2VydCUyMHNhZmFyaSUyMGR1bmVzfGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Dubai Creek', desc: 'Historic waterway with traditional abra rides, Gold Souk, Spice Souk, and dhow cruises.', icon: Ship, image: 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxEdWJhaSUyMENyZWVrJTIwc3Vuc2V0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Jumeirah Beach', desc: 'Pristine white sand beach with stunning views of Burj Al Arab and Atlantis The Palm.', icon: Palmtree, image: 'https://images.unsplash.com/photo-1580675758222-8366c4a8a8b0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxKdW1laXJhaCUyMGJlYWNoJTIwRHViYWl8ZW58MHx8fHwxNzc1ODE0ODU4fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Madinat Jumeirah', desc: 'Luxury resort complex with traditional Arabian architecture, souks, and waterways.', icon: Landmark, image: 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw1fHxNYWRpbmF0JTIwSnVtZWlyYWglMjBuaWdodHxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Burj Al Arab', desc: 'The iconic sail-shaped hotel and symbol of Dubai\'s luxury. Photo stop at the world\'s most luxurious hotel.', icon: Building, image: '/images/dubai/burj-al-arab.jpg' },
+  { name: 'Dubai Mall', desc: 'One of the world\'s largest shopping malls with Dubai Aquarium, ice rink, and endless entertainment.', icon: Camera, image: '/images/dubai/dubai-mall.jpg' },
+  { name: 'Desert Safari', desc: 'Thrilling dune bashing, camel rides, sandboarding, belly dancing, and BBQ dinner under the stars.', icon: Mountain, image: '/images/dubai/desert-safari.jpg' },
+  { name: 'Dubai Creek', desc: 'Historic waterway with traditional abra rides, Gold Souk, Spice Souk, and dhow cruises.', icon: Ship, image: '/images/dubai/dubai-creek.jpg' },
+  { name: 'Jumeirah Beach', desc: 'Pristine white sand beach with stunning views of Burj Al Arab and Atlantis The Palm.', icon: Palmtree, image: '/images/dubai/jumeirah.jpg' },
+  { name: 'Madinat Jumeirah', desc: 'Luxury resort complex with traditional Arabian architecture, souks, and waterways.', icon: Landmark, image: '/images/dubai/madinat.jpg' },
 ];
 
 const ITINERARY = [

@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1544551763-46a013bb70d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxNYWxkaXZlc3QlMjB0cm9waWNhbCUyMGJlYWNoJTIwcmVzb3J0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://images.unsplash.com/photo-1586611292717-f828b167408c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxTcmlsJTIwTGFua2ElMjB0ZW1wbGUlMjB0b3VyJTIwY3VsdHVyZXxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
-const CTA_BG = "https://images.unsplash.com/photo-1514282401047-d79a71a590e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxNYWxkaXZlc3QlMjB3YXRlciUyMHZpbGxhJTIwcmVzb3J0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/srilanka/maldives-beach.jpg";
+const ABOUT_IMG = "/images/srilanka/kandy.jpg";
+const CTA_BG = "/images/srilanka/maldives.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '6N/7D' },
@@ -18,12 +18,12 @@ const QUICK_INFO = [
 ];
 
 const DESTINATIONS = [
-  { name: 'Colombo', desc: 'Sri Lanka\'s commercial capital. City tour with ODEL shopping, Buddhist Temple & Freedom Memorial.', icon: Landmark, image: 'https://images.unsplash.com/photo-1586611292717-f828b167408c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxTcmlsJTIwTGFua2ElMjB0ZW1wbGUlMjB0b3VyJTIwY3VsdHVyZXxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Kandy', desc: 'Cultural capital of Sri Lanka. Visit the sacred Temple of the Tooth & gem factories.', icon: Building, image: 'https://images.unsplash.com/photo-1593693411515-c20261bcad6e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxLYW5keSUyMGN1bHR1cmFsJTIwY2l0eSUyMFNyaSUyMExhbmlhJTIwdGVtcGxlfGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Pinnawala', desc: 'Pinnawala Elephant Orphanage — home to orphaned elephants rescued from the wild.', icon: Ship, image: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw1fHxFbGVwaGFudCUyMG9ycGhhbnRhZ2V8ZW58MHx8fHwxNzc1ODE0ODU4fDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Nuwara Eliya', desc: '"Little England" of Sri Lanka. Tea estates, misty hills & Sita Amman Temple.', icon: Mountain, image: 'https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw2fHxTdXJhJTIwTGFua2ElMjB0ZWElMjBlc3RhdGVzfGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Maldives', desc: 'Crystal-clear waters, white sandy beaches & overwater villas. Tropical paradise!', icon: Palmtree, image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxNYWxkaXZlc3QlMjB0cm9waWNhbCUyMGJlYWNoJTIwcmVzb3J0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Male', desc: 'Capital of Maldives. Gateway to paradise islands with stunning marine life.', icon: Waves, image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxNYWxkaXZlc3QlMjB3YXRlciUyMHZpbGxhJTIwcmVzb3J0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Colombo', desc: 'Sri Lanka\'s commercial capital. City tour with ODEL shopping, Buddhist Temple & Freedom Memorial.', icon: Landmark, image: '/images/srilanka/colombo.jpg' },
+  { name: 'Kandy', desc: 'Cultural capital of Sri Lanka. Visit the sacred Temple of the Tooth & gem factories.', icon: Building, image: '/images/srilanka/kandy.jpg' },
+  { name: 'Pinnawala', desc: 'Pinnawala Elephant Orphanage — home to orphaned elephants rescued from the wild.', icon: Ship, image: '/images/srilanka/pinnawala.jpg' },
+  { name: 'Nuwara Eliya', desc: '"Little England" of Sri Lanka. Tea estates, misty hills & Sita Amman Temple.', icon: Mountain, image: '/images/srilanka/nuwara-eliya.jpg' },
+  { name: 'Maldives', desc: 'Crystal-clear waters, white sandy beaches & overwater villas. Tropical paradise!', icon: Palmtree, image: '/images/srilanka/maldives-beach.jpg' },
+  { name: 'Male', desc: 'Capital of Maldives. Gateway to paradise islands with stunning marine life.', icon: Waves, image: '/images/srilanka/male.jpg' },
 ];
 
 const ITINERARY = [

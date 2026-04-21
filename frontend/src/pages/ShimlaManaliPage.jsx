@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1616942986550-ea6469c08530?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxNYW5hbGklMjBSb2h0YW5nJTIwUGFzcyUyMHNub3clMjBtb3VudGFpbnMlMjBIaW1hY2hhbHxlbnwwfHx8fDE3NzU4MTcwODF8MA&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://images.unsplash.com/photo-1775201366556-17bf1f2ce8d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHw0fHxTaGltbGElMjBoaWxsJTIwc3RhdGlvbiUyMGNvbG9uaWFsJTIwYXJjaGl0ZWN0dXJlJTIwSW5kaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzc1ODE3MDgxfDA&ixlib=rb-4.1.0&q=85";
-const CTA_BG = "https://images.unsplash.com/photo-1651955671212-24069aac2c7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxNYW5hbGklMjBSb2h0YW5nJTIwUGFzcyUyMHNub3clMjBtb3VudGFpbnMlMjBIaW1hY2hhbHxlbnwwfHx8fDE3NzU4MTcwODF8MA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/shimla-manali/rohtang.jpg";
+const ABOUT_IMG = "/images/shimla-manali/shimla.jpg";
+const CTA_BG = "/images/shimla-manali/manali.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '8 or 9 Days' },
@@ -18,13 +18,13 @@ const QUICK_INFO = [
 ];
 
 const DESTINATIONS = [
-  { name: 'Delhi', desc: 'Starting point with Akshardham Swaminarayan Temple visit and orientation.', icon: Landmark, image: 'https://images.unsplash.com/photo-1610178009236-02461f18b272?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxTaGltbGElMjBoaWxsJTIwc3RhdGlvbiUyMGNvbG9uaWFsJTIwYXJjaGl0ZWN0dXJlJTIwSW5kaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzc1ODE3MDgxfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Shimla', desc: 'Colonial charm at 6,800ft. Mall Road, Shimla Church, Lakkad Bazar.', icon: Mountain, image: 'https://images.unsplash.com/photo-1775201498375-ded5998f9c83?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxTaGltbGElMjBoaWxsJTIwc3RhdGlvbiUyMGNvbG9uaWFsJTIwYXJjaGl0ZWN0dXJlJTIwSW5kaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzc1ODE3MDgxfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Kufri', desc: 'Winter sports capital at 8,500ft. Himalayan Zoo, Indira Bunglow & horse rides.', icon: Snowflake, image: 'https://images.unsplash.com/photo-1775201366607-4e47b3d2103f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxTaGltbGElMjBoaWxsJTIwc3RhdGlvbiUyMGNvbG9uaWFsJTIwYXJjaGl0ZWN0dXJlJTIwSW5kaWElMjBtb3VudGFpbnN8ZW58MHx8fHwxNzc1ODE3MDgxfDA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Manali', desc: 'Adventure hub at 6,317ft. Hidimba Temple, Manu Mandir, Club House & Vashishtha Kund.', icon: TreePine, image: 'https://images.unsplash.com/photo-1651955670895-9aa2e9243b66?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwyfHxNYW5hbGklMjBSb2h0YW5nJTIwUGFzcyUyMHNub3clMjBtb3VudGFpbnMlMjBIaW1hY2hhbHxlbnwwfHx8fDE3NzU4MTcwODF8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Rohtang Pass', desc: 'Snow Point at 13,450ft. Skiing, sledging, horse riding & snow adventures.', icon: Snowflake, image: 'https://images.unsplash.com/photo-1711943728939-d50142512e5b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHw0fHxNYW5hbGklMjBSb2h0YW5nJTIwUGFzcyUyMHNub3clMjBtb3VudGFpbnMlMjBIaW1hY2hhbHxlbnwwfHx8fDE3NzU4MTcwODF8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Solang Valley', desc: 'Paragliding, zorbing, skating & parachuting amidst stunning valley views.', icon: Tent, image: 'https://images.unsplash.com/photo-1616942986550-ea6469c08530?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwzfHxNYW5hbGklMjBSb2h0YW5nJTIwUGFzcyUyMHNub3clMjBtb3VudGFpbnMlMjBIaW1hY2hhbHxlbnwwfHx8fDE3NzU4MTcwODF8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Kullu Valley', desc: 'Scenic shawl factories, Prati Vaishnodevi Mandir & charming river valley views.', icon: Camera, image: 'https://images.unsplash.com/photo-1651955671212-24069aac2c7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDB8MHwxfHNlYXJjaHwxfHxNYW5hbGklMjBSb2h0YW5nJTIwUGFzcyUyMHNub3clMjBtb3VudGFpbnMlMjBIaW1hY2hhbHxlbnwwfHx8fDE3NzU4MTcwODF8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Delhi', desc: 'Starting point with Akshardham Swaminarayan Temple visit and orientation.', icon: Landmark, image: '/images/shimla-manali/delhi.jpg' },
+  { name: 'Shimla', desc: 'Colonial charm at 6,800ft. Mall Road, Shimla Church, Lakkad Bazar.', icon: Mountain, image: '/images/shimla-manali/shimla.jpg' },
+  { name: 'Kufri', desc: 'Winter sports capital at 8,500ft. Himalayan Zoo, Indira Bunglow & horse rides.', icon: Snowflake, image: '/images/shimla-manali/shimla.jpg' },
+  { name: 'Manali', desc: 'Adventure hub at 6,317ft. Hidimba Temple, Manu Mandir, Club House & Vashishtha Kund.', icon: TreePine, image: '/images/shimla-manali/manali.jpg' },
+  { name: 'Rohtang Pass', desc: 'Snow Point at 13,450ft. Skiing, sledging, horse riding & snow adventures.', icon: Snowflake, image: '/images/shimla-manali/rohtang.jpg' },
+  { name: 'Solang Valley', desc: 'Paragliding, zorbing, skating & parachuting amidst stunning valley views.', icon: Tent, image: '/images/shimla-manali/solang.jpg' },
+  { name: 'Kullu Valley', desc: 'Scenic shawl factories, Prati Vaishnodevi Mandir & charming river valley views.', icon: Camera, image: '/images/shimla-manali/kullu.jpg' },
 ];
 
 const ITINERARY_9D = [

@@ -5,25 +5,25 @@ const INDICATORS = [
     icon: DollarSign,
     title: 'Competitive Pricing',
     description: 'Best value packages with transparent pricing. No hidden costs, guaranteed.',
-    image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome017.jpg',
+    image: '/images/kerala/alleppey.jpg',
   },
   {
     icon: Globe,
     title: 'Worldwide Coverage',
     description: '50+ destinations across India and internationally. Wherever you dream, we take you.',
-    image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome018.jpg',
+    image: '/images/bangkok/singapore.jpg',
   },
   {
     icon: Zap,
     title: 'Fast Booking',
     description: 'Quick confirmation and hassle-free booking process. Travel planned in minutes.',
-    image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome020.jpg',
+    image: '/images/rajasthan/jaipur.jpg',
   },
   {
     icon: Users,
     title: 'Guided Tours',
     description: 'Experienced multilingual guides who know every destination inside out.',
-    image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome019.jpg',
+    image: '/images/temples/lenyadri.jpg',
   },
 ];
 

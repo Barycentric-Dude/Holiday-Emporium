@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1508009603885-50cf7c579365?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxCYW5na29rJTIwdG93biUyMHJpdmVyc2lkZSUyMG5pZ2h0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://images.unsplash.com/photo-1528181304800-259b08848526?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxBc2lhJTIwdHJhdmVsJTIwY3J1aXNlJTIwc2hpcHxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
-const CTA_BG = "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxTYWxvcmdhbGxvbiUyMHRvdXIlMjBza3lsaW5lfGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/bangkok/bangkok.jpg";
+const ABOUT_IMG = "/images/bangkok/wat-phra-kaew.jpg";
+const CTA_BG = "/images/bangkok/singapore.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '4 to 15 Days' },
@@ -18,12 +18,12 @@ const QUICK_INFO = [
 ];
 
 const DESTINATIONS = [
-  { name: 'Singapore', desc: 'Lion City with Marina Bay, Gardens by the Bay, Sentosa Island & Night Safari.', icon: Building, image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxTaW5nYXBvcmUlMjBjaXR5fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Bangkok', desc: 'Golden temples, Grand Palace, Safari World & Baiyoke Sky Tower.', icon: Landmark, image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxCYW5na29rJTIwdG93biUyMHJpdmVyc2lkZSUyMG5pZ2h0fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Pattaya', desc: 'Coral Island, Alcazar Show, Nong Nooch Village & Mini Siam.', icon: Palmtree, image: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxQYXR0YXlhJTIwYmVhY2glMjB0aGFpbGFuZHxlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Malaysia', desc: 'Petronas Twin Towers, Genting Highlands & Batu Caves.', icon: Mountain, image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxNYWxheXNpYSUyMENvbGxhdCUyMHRvd2Vyc3xlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Hong Kong', desc: 'Victoria Peak, Disneyland, Avenue of Stars & Aberdeen.', icon: Camera, image: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxIb25nIEtvbmclMjBjaXR5fGVufDB8fHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
-  { name: 'Macau', desc: 'Ruins of St. Paul, A-Ma Temple & world-class casinos.', icon: Waves, image: 'https://images.unsplash.com/photo-1583139217335-25f3f9ac7d8d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw1fHxNYWNhbyUyMGNhc2lub3xlbnwwfHx8fDE3NzU4MTQ4NTh8MA&ixlib=rb-4.1.0&q=85' },
+  { name: 'Singapore', desc: 'Lion City with Marina Bay, Gardens by the Bay, Sentosa Island & Night Safari.', icon: Building, image: '/images/bangkok/singapore.jpg' },
+  { name: 'Bangkok', desc: 'Golden temples, Grand Palace, Safari World & Baiyoke Sky Tower.', icon: Landmark, image: '/images/bangkok/bangkok.jpg' },
+  { name: 'Pattaya', desc: 'Coral Island, Alcazar Show, Nong Nooch Village & Mini Siam.', icon: Palmtree, image: '/images/bangkok/pattaya.jpg' },
+  { name: 'Malaysia', desc: 'Petronas Twin Towers, Genting Highlands & Batu Caves.', icon: Mountain, image: '/images/bangkok/malaysia.jpg' },
+  { name: 'Hong Kong', desc: 'Victoria Peak, Disneyland, Avenue of Stars & Aberdeen.', icon: Camera, image: '/images/bangkok/hongkong.jpg' },
+  { name: 'Macau', desc: 'Ruins of St. Paul, A-Ma Temple & world-class casinos.', icon: Waves, image: '/images/bangkok/macau.jpg' },
 ];
 
 const TOURS = {

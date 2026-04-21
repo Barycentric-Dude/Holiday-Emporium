@@ -6,9 +6,9 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
-const HERO_BG = "https://images.unsplash.com/photo-1745647912842-231631509cc2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB0ZW1wbGUlMjBhcmNoaXRlY3R1cmUlMjBzcGlyaXR1YWx8ZW58MHx8fHwxNzc1NTc1MTc4fDA&ixlib=rb-4.1.0&q=85";
+const HERO_BG = "/images/temples/ozar.jpg";
 const ABOUT_IMG = "/images/ASHTAVINAYAK.jpg";
-const CTA_BG = "https://images.unsplash.com/photo-1663089553004-2e5606d4304e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxNYWhhcmFzaHRyYSUyMHRlbXBsZSUyMHBpbGdyaW1hZ2UlMjBhbmNpZW50fGVufDB8fHx8MTc3NTgxMzcyMHww&ixlib=rb-4.1.0&q=85";
+const CTA_BG = "/images/temples/lenyadri.jpg";
 
 const QUICK_INFO = [
   { icon: Clock, label: 'Duration', value: '2 Nights / 3 Days' },

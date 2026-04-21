@@ -28,9 +28,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold font-['Cormorant_Garamond',serif] text-white mb-4">
-              Holiday <span className="text-[var(--brand-accent)]">Emporium</span>
-            </div>
+            <img
+              src="/images/Holiday Emporium.png"
+              alt="Holiday Emporium"
+              className="h-10 w-auto mb-4"
+            />
             <p className="text-sm text-stone-400 leading-relaxed mb-6 max-w-sm">
               Over 35 years of crafting meaningful journeys. From sacred pilgrimages to international
               adventures, we make every trip unforgettable.

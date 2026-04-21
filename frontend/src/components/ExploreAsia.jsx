@@ -1,12 +1,12 @@
 const DESTINATIONS = [
-  { name: 'Japan', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome010.jpg' },
-  { name: 'India', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome09.jpg' },
-  { name: 'Singapore', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome015.jpg' },
-  { name: 'Philippines', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome016.jpg' },
-  { name: 'Everest', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome013.jpg' },
-  { name: 'Thailand', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome014.jpg' },
-  { name: 'Bali', image: 'https://images.unsplash.com/photo-1656247203824-3d6f99461ba4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxCYWxpJTIwcmljZSUyMHRlcnJhY2VzfGVufDB8fHx8MTc3NTU3NTE5OHww&ixlib=rb-4.1.0&q=85' },
-  { name: 'Egypt', image: 'https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/onetrhome012.jpg' },
+  { name: 'Japan', image: '/images/shimla-manali/rohtang.jpg' },
+  { name: 'India', image: '/images/rajasthan/jaipur.jpg' },
+  { name: 'Singapore', image: '/images/bangkok/singapore.jpg' },
+  { name: 'Philippines', image: '/images/kerala/periyar.jpg' },
+  { name: 'Everest', image: '/images/shimla-manali/shimla.jpg' },
+  { name: 'Thailand', image: '/images/bangkok/wat-phra-kaew.jpg' },
+  { name: 'Bali', image: '/images/kerala/munnar.jpg' },
+  { name: 'Egypt', image: '/images/rajasthan/jaisalmer.jpg' },
 ];
 
 export default function ExploreAsia() {
