@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm start *)",
+      "WebSearch",
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o morgaon.jpg \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Morgaon.jpg/640px-Morgaon.jpg\")",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o siddhatek.jpg \"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Siddhi_Vinayak_at_Siddhatek.jpg/640px-Siddhi_Vinayak_at_Siddhatek.jpg\")",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o theur.jpg \"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Shri_Cintamani_of_Theur.jpg/640px-Shri_Cintamani_of_Theur.jpg\")",
+      "Bash(curl -L -A \"Mozilla/5.0\" -o ranjangaon.jpg \"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ranjangaon_Mahaganapati_Temple_Viman.jpg/640px-Ranjangaon_Mahaganapati_Temple_Viman.jpg\")",
+      "Bash(curl -v -L -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" -H \"Referer: https://en.wikipedia.org/\" \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Morgaon.jpg/640px-Morgaon.jpg\" -o \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\")",
+      "PowerShell($headers = @{ \"User-Agent\" = \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\"; \"Referer\" = \"https://en.wikipedia.org/\" }; Invoke-WebRequest -Uri \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Morgaon.jpg/640px-Morgaon.jpg\" -Headers $headers -OutFile \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\"; $f = Get-Item \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\"; Write-Output \"Size: $\\($f.Length\\) bytes\")",
+      "PowerShell($headers = @{ \"User-Agent\" = \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" }; Invoke-WebRequest -Uri \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Morgaon.jpg/320px-Morgaon.jpg\" -Headers $headers -OutFile \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\" -UseBasicParsing; $f = Get-Item \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\"; Write-Output \"Size: $\\($f.Length\\) bytes\")",
+      "Bash(python3 *)",
+      "Bash(node *)"
+    ]
+  }
+}

@@ -27,6 +27,7 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [bannerHeight, setBannerHeight] = useState(0);
   const [open, setOpen] = useState(false);
   const [toursOpen, setToursOpen] = useState(false);
   const [mobileToursOpen, setMobileToursOpen] = useState(false);
@@ -34,9 +35,27 @@ export default function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const getBannerHeight = () => {
+      const banner = document.querySelector('[data-testid="promo-banner"]');
+      return banner ? banner.getBoundingClientRect().height : 0;
+    };
+
+    const handleScroll = () => {
+      const bh = getBannerHeight();
+      setScrolled(window.scrollY > Math.max(bh, 40));
+      setBannerHeight(window.scrollY > bh ? 0 : bh);
+    };
+
+    setBannerHeight(getBannerHeight());
+
+    const observer = new MutationObserver(() => setBannerHeight(getBannerHeight()));
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const handleNav = (link) => {
@@ -76,7 +95,8 @@ export default function Navbar() {
   return (
     <header
       data-testid="navbar"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      style={{ top: bannerHeight }}
+      className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'glass shadow-sm' : 'bg-transparent'
       }`}
     >
