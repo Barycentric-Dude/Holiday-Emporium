@@ -68,7 +68,7 @@ TOURS = [
         "price": "Starting from ₹8,999 per person",
         "tagline": "A spiritual journey covering Maharashtra's sacred Ganpati temples",
         "description": "Embark on a sacred pilgrimage to all eight revered Ganpati temples of Maharashtra. This carefully curated 3-day journey takes you through the divine circuit of Morgaon, Siddhatek, Pali, Mahad, Theur, Lenyadri, Ozar, and Ranjangaon.",
-        "image": "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/MP4.png",
+        "image": "/images/ASHTAVINAYAK.jpg",
         "highlights": ["AC Tempo Traveller", "Darshan at all 8 temples", "Breakfast & Dinner included", "Experienced guide"],
         "itinerary": [
             {"day": "Day 1", "title": "Pune - Morgaon - Siddhatek - Pali", "details": "Early morning departure from Pune. Visit Shri Mayureshwar Temple at Morgaon, Shri Siddhi Vinayak at Siddhatek, and Shri Ballaleshwar at Pali. Overnight stay at Pali."},

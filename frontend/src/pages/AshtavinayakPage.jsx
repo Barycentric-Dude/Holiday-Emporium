@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import WhatsAppButton from '../components/WhatsAppButton';
 
 const HERO_BG = "https://images.unsplash.com/photo-1745647912842-231631509cc2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB0ZW1wbGUlMjBhcmNoaXRlY3R1cmUlMjBzcGlyaXR1YWx8ZW58MHx8fHwxNzc1NTc1MTc4fDA&ixlib=rb-4.1.0&q=85";
-const ABOUT_IMG = "https://sachintravels.karveandassociates.com/wp-content/uploads/2026/03/MP4.png";
+const ABOUT_IMG = "/images/ASHTAVINAYAK.jpg";
 const CTA_BG = "https://images.unsplash.com/photo-1663089553004-2e5606d4304e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxNYWhhcmFzaHRyYSUyMHRlbXBsZSUyMHBpbGdyaW1hZ2UlMjBhbmNpZW50fGVufDB8fHx8MTc3NTgxMzcyMHww&ixlib=rb-4.1.0&q=85";
 
 const QUICK_INFO = [
@@ -100,8 +100,8 @@ export default function AshtavinayakPage() {
       <section className="py-12 sm:py-20 lg:py-24 bg-[var(--brand-bg)]" data-testid="ashtavinayak-about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="relative rounded-lg overflow-hidden shadow-xl">
-              <img src={ABOUT_IMG} alt="Ashtavinayak Yatra" className="w-full h-64 sm:h-80 lg:h-96 object-cover" loading="lazy" />
+            <div className="relative rounded-lg overflow-hidden shadow-xl bg-white">
+              <img src={ABOUT_IMG} alt="Ashtavinayak Yatra" className="w-full h-64 sm:h-80 lg:h-96 object-contain" loading="lazy" />
             </div>
             <div>
               <p className="overline mb-3">Sacred Pilgrimage</p>
