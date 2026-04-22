@@ -103,10 +103,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center gap-2 flex-shrink-0" data-testid="navbar-logo">
-            <div className={`font-bold text-lg sm:text-xl lg:text-2xl font-['Cormorant_Garamond',serif] tracking-tight transition-colors ${scrolled ? 'text-[var(--brand-primary)]' : 'text-white'}`}>
-              Holiday <span className="text-[var(--brand-accent)]">Emporium</span>
-            </div>
+          <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center flex-shrink-0" data-testid="navbar-logo">
+            <img
+              src="/images/logo.png"
+              alt="Holiday Emporium"
+              className={`h-10 lg:h-12 w-auto transition-opacity ${scrolled ? 'opacity-100' : 'brightness-0 invert'}`}
+            />
           </button>
 
           {/* Desktop Nav */}
@@ -226,8 +228,8 @@ export default function Navbar() {
               <SheetContent side="right" className="w-80 bg-white">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex flex-col pt-8">
-                  <div className="font-bold text-2xl font-['Cormorant_Garamond',serif] text-[var(--brand-primary)] mb-8">
-                    Holiday <span className="text-[var(--brand-accent)]">Emporium</span>
+                  <div className="mb-8">
+                    <img src="/images/logo.png" alt="Holiday Emporium" className="h-10 w-auto" />
                   </div>
 
                   {NAV_LINKS.map((link) => {

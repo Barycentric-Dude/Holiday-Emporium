@@ -13,7 +13,9 @@
       "PowerShell($headers = @{ \"User-Agent\" = \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" }; Invoke-WebRequest -Uri \"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Morgaon.jpg/320px-Morgaon.jpg\" -Headers $headers -OutFile \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\" -UseBasicParsing; $f = Get-Item \"D:\\\\Karve Web Solution\\\\Holiday Emporium\\\\Holiday-Emporium\\\\frontend\\\\public\\\\images\\\\temples\\\\morgaon.jpg\"; Write-Output \"Size: $\\($f.Length\\) bytes\")",
       "Bash(python3 *)",
       "Bash(node *)",
-      "WebFetch(domain:commons.wikimedia.org)"
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(cp \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/Holiday Emporium.png\" \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/frontend/public/images/logo.png\")",
+      "Bash(cp \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/Holiday Emporium Siteicon Logo.png\" \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/frontend/public/favicon.png\")"
     ]
   }
 }
