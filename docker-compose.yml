@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: holiday_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: holiday_emporium
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      # Auto-init schema and seed data
+      - ./api/sql:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+
+  php_api:
+    image: php:8.2-apache
+    container_name: holiday_php_api
+    ports:
+      - "8000:80"
+    volumes:
+      - ./api:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_NAME=holiday_emporium
+    depends_on:
+      - db
+    # Install required extensions on boot
+    command: bash -c "docker-php-ext-install pdo pdo_mysql && a2enmod rewrite && apache2-foreground"
+
+volumes:
+  db_data:

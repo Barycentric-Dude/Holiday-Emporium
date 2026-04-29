@@ -30,8 +30,8 @@ export default function AdminLayout() {
       {/* Sidebar */}
       <aside className="w-64 bg-stone-900 text-white flex flex-col fixed inset-y-0 shadow-2xl z-50">
         <div className="p-6">
-          <Link to="/admin/dashboard" className="text-xl font-bold font-['Cormorant_Garamond',serif]">
-            Holiday <span className="text-[var(--brand-secondary)]">Emporium</span>
+          <Link to="/admin/dashboard">
+            <img src="/images/logo.png" alt="Holiday Emporium" className="h-8 w-auto brightness-0 invert" />
           </Link>
           <div className="mt-2 text-stone-400 text-xs uppercase tracking-widest font-bold">Admin Panel</div>
         </div>

@@ -14,7 +14,8 @@
       "Bash(python3 *)",
       "Bash(node *)",
       "WebFetch(domain:commons.wikimedia.org)",
-      "Bash(echo \"Download started in background \\(PID $!\\)\")"
+      "Bash(cp \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/Holiday Emporium.png\" \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/frontend/public/images/logo.png\")",
+      "Bash(cp \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/Holiday Emporium Siteicon Logo.png\" \"/home/barycentricdude/Documents/GitHub/Holiday-Emporium/frontend/public/favicon.png\")"
     ]
   }
 }

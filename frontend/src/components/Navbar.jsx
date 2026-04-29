@@ -105,9 +105,9 @@ export default function Navbar() {
           {/* Logo */}
           <button onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="flex items-center flex-shrink-0" data-testid="navbar-logo">
             <img
-              src="/images/Holiday Emporium.png"
+              src="/images/logo.png"
               alt="Holiday Emporium"
-              className="h-10 lg:h-12 w-auto"
+              className={`h-10 lg:h-12 w-auto transition-opacity ${scrolled ? 'opacity-100' : 'brightness-0 invert'}`}
             />
           </button>
 
@@ -228,11 +228,9 @@ export default function Navbar() {
               <SheetContent side="right" className="w-80 bg-white">
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                 <div className="flex flex-col pt-8">
-                  <img
-                    src="/images/Holiday Emporium.png"
-                    alt="Holiday Emporium"
-                    className="h-10 w-auto mb-8"
-                  />
+                  <div className="mb-8">
+                    <img src="/images/logo.png" alt="Holiday Emporium" className="h-10 w-auto" />
+                  </div>
 
                   {NAV_LINKS.map((link) => {
                     if (link.type === 'dropdown') {

@@ -1,44 +1,79 @@
-# Holiday Emporium (Sachin Travels)
+# Holiday Emporium
 
-A professional web application for a travel agency with over 35 years of legacy.
+A professional travel agency web application for Holiday Emporium (formerly Sachin Travels) — over 35 years of curated journeys.
 
-## Features
-- **Featured Packages:** Dynamic tour listings from MySQL.
-- **Detailed Itineraries:** Day-by-day breakdown of travel plans.
-- **Lead Generation:** Integrated enquiry form for potential customers.
-- **Shared Hosting Optimized:** Built with React and PHP/MySQL for easy deployment.
+## Tech Stack
 
-## Project Structure
-- `frontend/`: React application (Tailwind CSS, Radix UI).
-- `api/`: PHP Backend API.
-  - `sql/`: Database schema and seed data.
-- `backend/`: Legacy Python/FastAPI backend (for reference).
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, Tailwind CSS, Radix UI (shadcn), React Router v7 |
+| Backend | PHP 8.2, Apache, PDO |
+| Database | MySQL 8.0 |
+| Local Dev | Docker Compose |
 
-## Deployment (Shared Hosting)
-
-### 1. Database Setup
-1. Create a MySQL database in your hosting panel (cPanel/DirectAdmin).
-2. Import `api/sql/schema.sql` into your database.
-3. Import `api/sql/seed.sql` to populate initial tour data.
-
-### 2. Backend Configuration
-1. Open `api/config.php` and update the database credentials (`$host`, `$db`, `$user`, `$pass`).
-2. Upload the `api/` folder to your `public_html` directory.
-
-### 3. Frontend Deployment
-1. Open `frontend/.env` (or create it) and set `REACT_APP_BACKEND_URL` to your domain.
-2. Run `npm run build` in the `frontend` directory.
-3. Upload the contents of `frontend/build/` to your `public_html` directory.
+> The `/backend` Python/FastAPI directory is a legacy prototype and is not used in production.
 
 ## Local Development
+
+### Prerequisites
+- Docker & Docker Compose
+- Node.js 18+
+
+### Backend
+```bash
+docker compose up -d
+# PHP API → http://localhost:8000
+# MySQL → port 3306 (auto-seeded on first boot from api/sql/)
+```
 
 ### Frontend
 ```bash
 cd frontend
 npm install
-npm start
+cp .env.example .env          # Set REACT_APP_BACKEND_URL=http://localhost:8000
+npm start                      # http://localhost:3000
 ```
 
-### Backend
-Requires a local PHP server (like XAMPP, WAMP, or `php -S localhost:8000`).
-Ensure MySQL is running and the database is configured in `api/config.php`.
+## Deployment (Shared Hosting)
+
+### 1. Database
+1. Create a MySQL database in cPanel.
+2. Import `api/sql/schema.sql`, then `api/sql/seed.sql` via phpMyAdmin.
+
+### 2. PHP Backend
+1. Edit `api/config.php` — replace `getenv()` calls with your actual DB credentials (`$host = 'localhost'`).
+2. Upload the `api/` folder to `public_html/api/`.
+
+### 3. React Frontend
+```bash
+cd frontend
+echo "REACT_APP_BACKEND_URL=https://yourdomain.com" > .env
+npm run build
+```
+Upload everything inside `frontend/build/` to `public_html/`.
+
+### 4. Apache SPA Routing
+Add to `public_html/.htaccess`:
+```apache
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteRule ^ index.html [QSA,L]
+```
+
+### 5. Final Checks
+- Set PHP version to **8.2** in cPanel → MultiPHP Manager.
+- Enable SSL via cPanel → AutoSSL.
+- Admin panel: `https://yourdomain.com/admin` — default credentials `admin` / `admin123` (change after first login).
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/tours` | All tours |
+| GET | `/api/tours/:id` | Single tour with itinerary, highlights, variants |
+| POST | `/api/leads` | Submit enquiry form |
+| POST | `/api/admin/login` | Admin login |
+| GET | `/api/admin/leads` | All leads (protected) |
+| GET/POST/PUT/DELETE | `/api/admin/tours` | Manage tours (protected) |
