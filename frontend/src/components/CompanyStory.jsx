@@ -15,17 +15,17 @@ export default function CompanyStory() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${STORY_BG})` }}
       />
-      <div className="absolute inset-0 bg-[var(--brand-bg)]/90 noise-overlay" />
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text */}
           <div>
-            <p className="overline mb-3">Our Story</p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-[var(--brand-text)] tracking-tight mb-6">
+            <p className="overline mb-3 text-white/80">Our Story</p>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight mb-6">
               35 Years of Creating Meaningful Journeys
             </h2>
-            <div className="space-y-4 text-[var(--brand-text-muted)] text-base leading-relaxed">
+            <div className="space-y-4 text-white/90 text-base font-semibold leading-relaxed">
               <p>
                 Every great journey begins with a vision. Our story began 35 years ago, when our founder set out
                 with a simple yet powerful idea — to help people discover the world in a way that is seamless,
@@ -40,7 +40,7 @@ export default function CompanyStory() {
               <p>
                 Today, after three and a half decades, we remain rooted in the same values of trust, excellence,
                 and personalized service that shaped our beginnings — proudly serving travelers from our home
-                base in <strong className="text-[var(--brand-primary)]">Pune, Maharashtra</strong>.
+                base in <strong className="text-[var(--brand-accent)]">Pune, Maharashtra</strong>.
               </p>
             </div>
           </div>

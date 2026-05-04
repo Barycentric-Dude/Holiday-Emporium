@@ -198,6 +198,69 @@ const TOURS = {
       { day: 'Day 4', title: 'Kuala Lumpur - Mumbai', details: 'Proceed to airport for flight to Mumbai. Tour ends.', highlights: ['Departure'], stay: '' },
     ]
   },
+  best_singapore: {
+    label: 'Best of Singapore (6D)',
+    sublabel: '5N / 6 Days',
+    price: '₹1,29,000/person',
+    destinations: 'Singapore',
+    description: 'A premium Singapore experience covering all iconic landmarks, theme parks & attractions.',
+    days: [
+      { day: 'Day 1', title: 'Mumbai → Singapore', details: 'Report 3 hrs before flight. Depart to Singapore. On arrival, city orientation — Merlion Park, Marina Bay waterfront & Clarke Quay. Hotel check-in.', highlights: ['Merlion Park', 'Marina Bay', 'Clarke Quay'], stay: 'Singapore' },
+      { day: 'Day 2', title: 'Universal Studios Singapore', details: 'Full day at Universal Studios Singapore — Transformers, Jurassic Park, Hollywood, Minion Park & more. Evening stroll on Sentosa Island beaches.', highlights: ['Universal Studios', 'Sentosa Island'], stay: 'Singapore' },
+      { day: 'Day 3', title: 'Gardens by the Bay & Marina Bay Sands', details: 'Visit Gardens by the Bay (Flower Dome & Cloud Forest). Marina Bay Sands SkyPark for panoramic city views. Evening on Orchard Road for world-class shopping.', highlights: ['Gardens by the Bay', 'Marina Bay Sands', 'Orchard Road'], stay: 'Singapore' },
+      { day: 'Day 4', title: 'S.E.A. Aquarium & Sentosa Beaches', details: 'S.E.A. Aquarium with over 100,000 marine animals. Palawan & Siloso Beach leisure. Evening cable car ride over Sentosa with stunning harbour views.', highlights: ['S.E.A. Aquarium', 'Palawan Beach', 'Cable Car'], stay: 'Singapore' },
+      { day: 'Day 5', title: 'Night Safari & Singapore River Cruise', details: 'Daytime — Chinatown & Little India cultural walk. Evening — Night Safari (world\'s first nocturnal wildlife park). Dinner cruise on Singapore River.', highlights: ['Night Safari', 'Singapore River Cruise', 'Chinatown'], stay: 'Singapore' },
+      { day: 'Day 6', title: 'Singapore → Mumbai', details: 'Morning shopping at Bugis Street or Mustafa Centre. Transfer to Changi Airport. Flight to Mumbai. Tour ends with wonderful Singapore memories.', highlights: ['Bugis Street', 'Departure'], stay: '' },
+    ]
+  },
+  bnppk: {
+    label: 'Bangkok Pattaya Phuket Krabi (8D)',
+    sublabel: '7N / 8 Days',
+    price: '₹1,35,000/person',
+    destinations: 'Bangkok, Pattaya, Phuket, Krabi',
+    description: "Thailand's best cities and beaches in one epic 8-day journey!",
+    days: [
+      { day: 'Day 1', title: 'Mumbai → Bangkok', details: 'Report 3 hrs before flight. Depart to Bangkok. On arrival hotel check-in. Evening walk through Khao San Road and Chinatown night market.', highlights: ['Bangkok', 'Khao San Road'], stay: 'Bangkok' },
+      { day: 'Day 2', title: 'Bangkok Temple Tour', details: 'Visit Grand Palace, Wat Phra Kaew (Temple of the Emerald Buddha), Wat Pho (Reclining Buddha) & Wat Arun (Temple of Dawn). Evening Chao Praya River Cruise dinner. Baiyoke Sky Tower.', highlights: ['Grand Palace', 'Wat Pho', 'Wat Arun', 'River Cruise'], stay: 'Bangkok' },
+      { day: 'Day 3', title: 'Bangkok → Pattaya (150 KM)', details: 'After breakfast, drive to Pattaya. Coral Island by speedboat — Parasailing, Glass bottom boat. Evening Alcazar Cabaret Show.', highlights: ['Coral Island', 'Parasailing', 'Alcazar Show'], stay: 'Pattaya' },
+      { day: 'Day 4', title: 'Pattaya → Phuket', details: 'Nong Nooch Village — Thai Cultural Show & Elephant Show. Mini Siam. Evening flight to Phuket. Hotel check-in.', highlights: ['Nong Nooch Village', 'Mini Siam', 'Phuket'], stay: 'Phuket' },
+      { day: 'Day 5', title: 'Phuket Sightseeing', details: 'Big Buddha, Wat Chalong Temple, Promthep Cape sunset viewpoint. Bangla Road evening. Old Phuket Town street art walk.', highlights: ['Big Buddha', 'Wat Chalong', 'Promthep Cape'], stay: 'Phuket' },
+      { day: 'Day 6', title: 'Phi Phi Island Tour', details: 'Full-day speedboat tour to Phi Phi Islands — Maya Bay, Loh Samah Bay, Viking Cave & snorkeling. Return to Phuket by evening.', highlights: ['Phi Phi Islands', 'Maya Bay', 'Snorkeling'], stay: 'Phuket' },
+      { day: 'Day 7', title: 'Phuket → Krabi', details: 'Ferry to Krabi. Check-in at beach resort. Visit Railay Beach (accessible only by boat), Ao Nang promenade & Thung Teao Forest Natural Park.', highlights: ['Railay Beach', 'Ao Nang', 'Krabi'], stay: 'Krabi' },
+      { day: 'Day 8', title: 'Krabi → Mumbai', details: 'Morning breakfast and leisure. Transfer to Krabi Airport. Flight to Mumbai via Bangkok. Tour ends with beautiful Thai memories.', highlights: ['Departure'], stay: '' },
+    ]
+  },
+  best_thailand: {
+    label: 'Best of Thailand (6D)',
+    sublabel: '5N / 6 Days',
+    price: '₹79,449/person',
+    destinations: 'Bangkok, Pattaya',
+    description: 'A perfect blend of Thai temples, culture, beaches & entertainment.',
+    days: [
+      { day: 'Day 1', title: 'Mumbai → Bangkok', details: 'Report 3 hrs before flight. Depart to Bangkok. On arrival hotel check-in. Evening Tuk Tuk ride through Chinatown & Yaowarat Road night market.', highlights: ['Bangkok', 'Chinatown Night Market'], stay: 'Bangkok' },
+      { day: 'Day 2', title: 'Bangkok Temple Tour', details: 'Golden Buddha (Wat Traimit), Reclining Buddha (Wat Pho), Principle Buddha (Wat Phra Kaew). Baiyoke Sky Tower aerial view. Evening Chao Praya River Cruise with traditional Thai dinner.', highlights: ['Grand Palace', 'Baiyoke Tower', 'River Cruise'], stay: 'Bangkok' },
+      { day: 'Day 3', title: 'Bangkok → Pattaya (150 KM)', details: 'Drive to Pattaya. Visit Coral Island by speedboat — Parasailing & Glass bottom boat ride. Authentic Thai Massage. Evening Gems Factory.', highlights: ['Coral Island', 'Parasailing', 'Thai Massage'], stay: 'Pattaya' },
+      { day: 'Day 4', title: 'Pattaya Sightseeing', details: 'Nong Nooch Village — Thai Cultural Show & Elephant Show. Mini Siam miniature park. Evening dazzling Alcazar Cabaret Show.', highlights: ['Nong Nooch Village', 'Mini Siam', 'Alcazar Show'], stay: 'Pattaya' },
+      { day: 'Day 5', title: 'Pattaya → Bangkok', details: 'Proceed to Safari World — Wildlife Safari, Marine Park, Orang Utan Boxing, Sea Lion Show & Dolphins Show. Evening shopping at Chatuchak Weekend Market or MBK Centre.', highlights: ['Safari World', 'Wildlife Safari', 'Shopping'], stay: 'Bangkok' },
+      { day: 'Day 6', title: 'Bangkok → Mumbai', details: 'Early morning departure. Transfer to Suvarnabhumi Airport. Flight to Mumbai. Tour ends with wonderful Thailand memories.', highlights: ['Departure'], stay: '' },
+    ]
+  },
+  womens_sg_my: {
+    label: "Women's Special Sg+My (7D)",
+    sublabel: '6N / 7 Days',
+    price: '₹1,49,000/person',
+    destinations: 'Singapore, Malaysia',
+    description: 'A specially curated women-only tour with premium experiences, safe travel & unforgettable moments.',
+    days: [
+      { day: 'Day 1', title: 'Mumbai → Singapore', details: 'Report 3 hrs before flight. Depart to Singapore. Welcome dinner at Marina Bay. Evening city illuminations walk — Merlion Park, Gardens Supertree light show.', highlights: ['Marina Bay', 'Merlion Park', 'Supertree Grove'], stay: 'Singapore' },
+      { day: 'Day 2', title: 'Universal Studios & Sentosa', details: 'Full day at Universal Studios Singapore. Evening at Sentosa Island — S.E.A. Aquarium, Siloso Beach, cable car ride back.', highlights: ['Universal Studios', 'Sentosa Island', 'Cable Car'], stay: 'Singapore' },
+      { day: 'Day 3', title: 'Singapore Culture & Night Safari', details: 'Gardens by the Bay (Flower Dome & Cloud Forest). Art Science Museum. Orchard Road shopping. Evening Night Safari — world\'s first nocturnal wildlife park.', highlights: ['Gardens by the Bay', 'Art Science Museum', 'Orchard Road', 'Night Safari'], stay: 'Singapore' },
+      { day: 'Day 4', title: 'Singapore → Kuala Lumpur (Coach)', details: 'Morning checkout. Coach to Kuala Lumpur. Petronas Twin Towers observation deck, KL Tower, Merdeka Square. Evening dinner and shopping at Pavilion KL Mall.', highlights: ['Petronas Towers', 'KL Tower', 'Pavilion Mall'], stay: 'Kuala Lumpur' },
+      { day: 'Day 5', title: 'Genting Highlands Theme Park', details: 'Day trip to Genting Highlands by cable car. Outdoor theme park — Monorail, Roller Coaster, Go Carting, Water Splash. Casino (optional). Return to KL.', highlights: ['Genting Highlands', 'Cable Car', 'Theme Park'], stay: 'Kuala Lumpur' },
+      { day: 'Day 6', title: 'Kuala Lumpur Sightseeing', details: 'Batu Caves (golden Murugan statue). Kuala Lumpur Chocolate Factory. Local cuisine tour — Nasi Lemak, Char Kway Teow. Shopping at Suria KLCC. Farewell dinner.', highlights: ['Batu Caves', 'Chocolate Factory', 'KLCC Shopping', 'Farewell Dinner'], stay: 'Kuala Lumpur' },
+      { day: 'Day 7', title: 'Kuala Lumpur → Mumbai', details: 'After breakfast, transfer to Kuala Lumpur International Airport. Flight to Mumbai. Tour ends with beautiful Southeast Asian memories.', highlights: ['Departure'], stay: '' },
+    ]
+  },
 };
 
 export default function BangkokMalaysiaSingaporePage() {
@@ -356,6 +419,7 @@ export default function BangkokMalaysiaSingaporePage() {
                 >
                   <span className="block">{t.label}</span>
                   <span className="block text-[10px] opacity-70">{t.sublabel}</span>
+                  {t.price && <span className="block text-[10px] font-bold text-purple-300">{t.price}</span>}
                 </button>
               ))}
             </div>

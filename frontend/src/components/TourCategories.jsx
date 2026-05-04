@@ -79,8 +79,9 @@ export default function TourCategories() {
         {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-5" data-testid="tour-bento-grid">
           {CATEGORIES.map((cat, i) => (
-            <div
+            <a
               key={cat.title}
+              href="#packages"
               className={`bento-item cursor-pointer reveal ${cat.span} ${cat.height}`}
               style={{ animationDelay: `${i * 0.1}s` }}
               data-testid={`tour-category-${cat.title.toLowerCase().replace(/\s+/g, '-')}`}
@@ -95,7 +96,7 @@ export default function TourCategories() {
                 <h3 className="text-xl sm:text-2xl font-medium font-['Cormorant_Garamond',serif] mb-1">{cat.title}</h3>
                 <p className="text-sm text-white/80 font-['Manrope',sans-serif]">{cat.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

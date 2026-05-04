@@ -11,10 +11,10 @@ const ABOUT_IMG = "/images/kerala/munnar.jpg";
 const CTA_BG = "/images/kerala/kanyakumari.jpg";
 
 const QUICK_INFO = [
-  { icon: Clock, label: 'Duration', value: '9N/10D or 7N/8D' },
-  { icon: MapPin, label: 'Starting Point', value: 'Trivandrum' },
+  { icon: Clock, label: 'Duration', value: '4N/5D to 9N/10D' },
+  { icon: MapPin, label: 'Starting Point', value: 'Cochin / Trivandrum' },
   { icon: Heart, label: 'Trip Type', value: 'Nature & Cultural' },
-  { icon: Users, label: 'Ideal For', value: 'Families & Nature Lovers' },
+  { icon: Users, label: 'Ideal For', value: 'All Travelers' },
 ];
 
 const DESTINATIONS = [
@@ -51,13 +51,39 @@ const ITINERARY_8D = [
   { day: 'Day 8', title: 'Cochin \u2192 Departure', details: 'Proceed to Cochin Railway Station or Airport. Departure. Tour ends.', highlights: ['Departure'], stay: '' },
 ];
 
+const ITINERARY_WOMENS = [
+  { day: 'Day 1', title: 'Arrive Cochin → Munnar (130 KM)', details: 'Welcome at Cochin. Scenic drive through spice and tea plantations to Munnar. Hotel check-in. Welcome dinner with traditional Kathakali cultural performance.', highlights: ['Cochin', 'Munnar', 'Kathakali Performance'], stay: 'Munnar' },
+  { day: 'Day 2', title: 'Munnar Sightseeing', details: 'After breakfast, visit the lush Tea Gardens and Tea Museum. Explore Mattupetty Dam & Echo Point for stunning views. Afternoon visit Eravikulam National Park (Nilgiri Tahr habitat) and Spice Plantation. Evening leisure and shopping.', highlights: ['Tea Gardens', 'Mattupetty Dam', 'Echo Point', 'Spice Plantation'], stay: 'Munnar' },
+  { day: 'Day 3', title: 'Munnar → Alleppey (160 KM)', details: 'After breakfast, drive down to Alleppey. Board a traditional Kerala houseboat for an overnight backwater cruise on the serene Vembanad Lake. Enjoy authentic Kerala meals on board with spectacular backwater views.', highlights: ['Houseboat Cruise', 'Vembanad Lake', 'Backwaters'], stay: 'Houseboat' },
+  { day: 'Day 4', title: 'Alleppey → Cochin (53 KM)', details: 'Morning breakfast on the houseboat. Disembark and drive to Cochin. Harbour cruise past Chinese Fishing Nets. Visit Dutch Palace, Jewish Synagogue & Fort Kochi heritage area. Evening shopping at local boutiques and spice markets.', highlights: ['Harbour Cruise', 'Chinese Fishing Nets', 'Dutch Palace', 'Synagogue'], stay: 'Cochin' },
+  { day: 'Day 5', title: 'Cochin → Departure', details: 'After breakfast, proceed to Cochin International Airport or Railway Station. Tour ends with beautiful memories of Gods Own Country.', highlights: ['Departure'], stay: '' },
+];
+
+const ITINERARY_HONEYMOON = [
+  { day: 'Day 1', title: 'Arrive Cochin → Munnar (130 KM)', details: 'Welcome at Cochin with flower garlands. Scenic couple\'s drive through tea country to Munnar. Check-in at a romantic hillside resort. Candle-lit welcome dinner.', highlights: ['Romantic Resort', 'Cochin', 'Munnar'], stay: 'Munnar' },
+  { day: 'Day 2', title: 'Munnar Sightseeing & Spa', details: 'Visit the famous Tea Gardens, Mattupetty Dam & Echo Point. Afternoon couples Ayurvedic massage and spa at the resort. Evening stroll through misty tea estates at sunset.', highlights: ['Tea Gardens', 'Mattupetty Dam', 'Couples Spa', 'Echo Point'], stay: 'Munnar' },
+  { day: 'Day 3', title: 'Munnar → Thekkady / Periyar (110 KM)', details: 'Drive to Thekkady. Boat ride in Periyar Lake to spot elephants, bison & exotic birds in the wildlife sanctuary. Evening Kathakali performance and Kalaripayattu martial arts show.', highlights: ['Periyar Lake', 'Wildlife Sanctuary', 'Kathakali', 'Boat Ride'], stay: 'Periyar' },
+  { day: 'Day 4', title: 'Periyar → Alleppey (175 KM)', details: 'Drive to Alleppey and board a private overnight houseboat on Kerala\'s famed backwaters. Enjoy a candlelit dinner on deck under starlight while gliding through tranquil Vembanad Lake.', highlights: ['Private Houseboat', 'Candlelit Dinner', 'Backwater Cruise'], stay: 'Houseboat' },
+  { day: 'Day 5', title: 'Alleppey → Kovalam Beach (160 KM)', details: 'Disembark after breakfast. Drive to Trivandrum and check in at a beach resort in Kovalam. Evening romantic sunset walk along the crescent-shaped Kovalam Beach.', highlights: ['Kovalam Beach', 'Beach Resort', 'Sunset'], stay: 'Kovalam' },
+  { day: 'Day 6', title: 'Trivandrum Sightseeing', details: 'Morning visit Padmanabhaswamy Temple and Velli Lake. Afternoon leisure at Kovalam Beach — swimming, Ayurvedic massage, or watersports. Romantic farewell dinner by the sea.', highlights: ['Padmanabhaswamy Temple', 'Velli Lake', 'Beach Leisure', 'Farewell Dinner'], stay: 'Kovalam' },
+  { day: 'Day 7', title: 'Trivandrum → Departure', details: 'After breakfast, transfer to Trivandrum International Airport or Railway Station. Tour ends with cherished honeymoon memories from God\'s Own Country.', highlights: ['Departure'], stay: '' },
+];
+
+const TOURS = {
+  womens: { label: "Women's Special (5D)", sublabel: '4N / 5 Days', price: '₹34,000/person', itinerary: ITINERARY_WOMENS },
+  honeymoon: { label: 'Honeymoon Special (7D)', sublabel: '6N / 7 Days', price: '₹52,000/person', itinerary: ITINERARY_HONEYMOON },
+  '8day': { label: 'Express Kerala (8D)', sublabel: '7N / 8 Days', itinerary: ITINERARY_8D },
+  '10day': { label: 'Full Kerala (10D)', sublabel: '9N / 10 Days', itinerary: ITINERARY_10D },
+};
+
 export default function KeralaPage() {
   const navigate = useNavigate();
-  const [activeItinerary, setActiveItinerary] = useState('10day');
+  const [activeItinerary, setActiveItinerary] = useState('womens');
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
-  const itinerary = activeItinerary === '10day' ? ITINERARY_10D : ITINERARY_8D;
+  const tour = TOURS[activeItinerary];
+  const itinerary = tour.itinerary;
 
   return (
     <div className="min-h-screen bg-[var(--brand-bg)]">
@@ -186,25 +212,23 @@ export default function KeralaPage() {
               Itinerary
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[var(--brand-text-muted)] max-w-xl mx-auto mb-6">
-              Choose from two curated itinerary options for this incredible journey.
+              Choose from four curated Kerala tour options.
             </p>
 
             {/* Toggle */}
-            <div className="inline-flex rounded-full bg-white border border-[var(--brand-border)] p-1" data-testid="itinerary-toggle">
-              <button
-                onClick={() => setActiveItinerary('10day')}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeItinerary === '10day' ? 'bg-emerald-700 text-white' : 'text-[var(--brand-text-muted)] hover:text-emerald-700'}`}
-                data-testid="toggle-10day"
-              >
-                10 Days (Full)
-              </button>
-              <button
-                onClick={() => setActiveItinerary('8day')}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${activeItinerary === '8day' ? 'bg-emerald-700 text-white' : 'text-[var(--brand-text-muted)] hover:text-emerald-700'}`}
-                data-testid="toggle-8day"
-              >
-                8 Days (Express)
-              </button>
+            <div className="inline-flex flex-wrap justify-center rounded-xl bg-white border border-[var(--brand-border)] p-1 gap-1" data-testid="itinerary-toggle">
+              {Object.entries(TOURS).map(([key, t]) => (
+                <button
+                  key={key}
+                  onClick={() => setActiveItinerary(key)}
+                  className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${activeItinerary === key ? 'bg-emerald-700 text-white' : 'text-[var(--brand-text-muted)] hover:text-emerald-700'}`}
+                  data-testid={`toggle-${key}`}
+                >
+                  <span className="block">{t.label}</span>
+                  <span className="block text-[10px] opacity-70">{t.sublabel}</span>
+                  {t.price && <span className="block text-[10px] font-bold text-emerald-300">{t.price}</span>}
+                </button>
+              ))}
             </div>
           </div>
 

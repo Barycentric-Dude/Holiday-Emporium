@@ -9,6 +9,8 @@ import KeralaPage from "./pages/KeralaPage";
 import SriLankaMaldivesPage from "./pages/SriLankaMaldivesPage";
 import RajasthanPage from "./pages/RajasthanPage";
 import ShimlaManaliPage from "./pages/ShimlaManaliPage";
+import BaliPage from "./pages/BaliPage";
+import VietnamPage from "./pages/VietnamPage";
 import axios from "axios";
 import { AuthProvider } from "./context/AuthContext";
 import AdminLoginPage from "./pages/admin/AdminLoginPage";
@@ -36,6 +38,8 @@ function App() {
             <Route path="/tours/sri-lanka-maldives" element={<SriLankaMaldivesPage />} />
             <Route path="/tours/rajasthan" element={<RajasthanPage />} />
             <Route path="/tours/shimla-manali" element={<ShimlaManaliPage />} />
+            <Route path="/tours/bali" element={<BaliPage />} />
+            <Route path="/tours/vietnam" element={<VietnamPage />} />
 
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLoginPage />} />

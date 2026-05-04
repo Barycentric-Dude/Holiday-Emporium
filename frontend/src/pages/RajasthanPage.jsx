@@ -11,8 +11,8 @@ const ABOUT_IMG = "/images/rajasthan/udaipur.jpg";
 const CTA_BG = "/images/rajasthan/jaisalmer.jpg";
 
 const QUICK_INFO = [
-  { icon: Clock, label: 'Duration', value: '7 / 9 / 15 Days' },
-  { icon: MapPin, label: 'Starting Point', value: 'Abu Road / Bikaner' },
+  { icon: Clock, label: 'Duration', value: '6 / 7 / 9 / 15 Days' },
+  { icon: MapPin, label: 'Starting Point', value: 'Jaipur / Abu Road / Bikaner' },
   { icon: Heart, label: 'Trip Type', value: 'Heritage & Desert' },
   { icon: Users, label: 'Ideal For', value: 'All Travelers' },
 ];
@@ -30,9 +30,37 @@ const DESTINATIONS = [
 ];
 
 const TOURS = {
-  full: {
-    label: 'Mewad Marwad (15D)',
-    sublabel: '14N / 15 Days',
+  iconic: {
+    label: 'Iconic Rajasthan (7D)',
+    sublabel: '6N / 7 Days',
+    price: '₹36,559/person',
+    days: [
+      { day: 'Day 1', title: 'Arrive Jaipur', details: 'Report to Tour Manager at Jaipur Railway Station or Airport. Hotel check-in. Evening orientation walk through the Pink City.', highlights: ['Jaipur', 'Pink City'], stay: 'Jaipur' },
+      { day: 'Day 2', title: 'Jaipur Sightseeing', details: 'Visit Amer Fort (jeep or elephant ride), Hawa Mahal, City Palace, Jantar Mantar & Jal Mahal. Evening dinner at the famous Chokhi Dhani cultural village.', highlights: ['Amer Fort', 'Hawa Mahal', 'City Palace', 'Chokhi Dhani'], stay: 'Jaipur' },
+      { day: 'Day 3', title: 'Jaipur → Jodhpur (340 KM)', details: 'After breakfast, depart for Jodhpur — the Blue City. En route visit Pushkar Brahma Mandir and Ajmer Khwaja Dargah. Arrive Jodhpur by evening.', highlights: ['Brahma Mandir', 'Ajmer Dargah'], stay: 'Jodhpur' },
+      { day: 'Day 4', title: 'Jodhpur Sightseeing', details: 'Visit the majestic Mehrangarh Fort with panoramic views, Umaid Bhawan Palace & Museum, Jaswant Thada cenotaph. Explore the indigo-painted streets and bustling Clock Tower bazaars.', highlights: ['Mehrangarh Fort', 'Umaid Bhawan Palace', 'Clock Tower'], stay: 'Jodhpur' },
+      { day: 'Day 5', title: 'Jodhpur → Udaipur (250 KM)', details: 'After breakfast, drive to Udaipur — the City of Lakes. En route visit the magnificent Ranakpur Jain Temples, known for their 1444 carved marble pillars.', highlights: ['Ranakpur Jain Temple', 'Udaipur'], stay: 'Udaipur' },
+      { day: 'Day 6', title: 'Udaipur Sightseeing', details: 'Visit City Palace complex, Crystal Gallery, Jagdish Temple & Sahelion ki Badi. Enjoy a romantic boat ride on Lake Pichola with views of Lake Palace. Evening at Fateh Sagar Lake.', highlights: ['City Palace', 'Lake Pichola', 'Sahelion ki Badi', 'Crystal Gallery'], stay: 'Udaipur' },
+      { day: 'Day 7', title: 'Udaipur → Departure', details: 'After breakfast, proceed to Udaipur Railway Station or Maharana Pratap Airport. Tour ends with royal memories of the Land of Kings.', highlights: ['Departure'], stay: '' },
+    ]
+  },
+  highlights: {
+    label: 'Rajasthan Highlights (6D)',
+    sublabel: '5N / 6 Days',
+    price: '₹32,669/person',
+    days: [
+      { day: 'Day 1', title: 'Arrive Jaipur', details: 'Report to Tour Manager at Jaipur Railway Station or Airport. Hotel check-in. Evening at leisure to explore local markets.', highlights: ['Jaipur', 'Pink City'], stay: 'Jaipur' },
+      { day: 'Day 2', title: 'Jaipur Sightseeing', details: 'Full day exploring Jaipur — visit Hawa Mahal, Amer Fort, City Palace, Jantar Mantar & Albert Hall Museum. Dinner at Chokhi Dhani.', highlights: ['Hawa Mahal', 'Amer Fort', 'City Palace', 'Jantar Mantar'], stay: 'Jaipur' },
+      { day: 'Day 3', title: 'Jaipur → Pushkar (145 KM)', details: 'Drive to the sacred town of Pushkar. Visit the holy Brahma Mandir (one of very few Brahma temples in India), Pushkar Lake, and Savitri Mata Temple. En route stop at Ajmer Khwaja Dargah.', highlights: ['Brahma Mandir', 'Pushkar Lake', 'Ajmer Dargah'], stay: 'Pushkar' },
+      { day: 'Day 4', title: 'Pushkar → Udaipur (280 KM)', details: 'After breakfast, drive to Udaipur. En route visit the formidable Chittorgarh Fort — see Padmini Palace, Vijay Stambha (Tower of Victory) & Kirti Stambha.', highlights: ['Chittorgarh Fort', 'Padmini Palace', 'Vijay Stambha'], stay: 'Udaipur' },
+      { day: 'Day 5', title: 'Udaipur Sightseeing', details: 'Visit City Palace, Crystal Gallery & Jagdish Temple. Enjoy a scenic boat ride on Lake Pichola. Afternoon visit Sahelion ki Badi gardens. Evening sunset at Fateh Sagar Lake.', highlights: ['City Palace', 'Lake Pichola', 'Crystal Gallery', 'Fateh Sagar'], stay: 'Udaipur' },
+      { day: 'Day 6', title: 'Udaipur → Departure', details: 'After breakfast, transfer to Udaipur Railway Station or Airport. Tour ends with beautiful Rajasthani memories.', highlights: ['Departure'], stay: '' },
+    ]
+  },
+  mewad: {
+    label: 'Mewad + Ranthambore (9D)',
+    sublabel: '8N / 9 Days',
+    price: '₹53,559/person',
     days: [
       { day: 'Day 1', title: 'Abu Road \u2192 Mount Abu (28 KM)', details: 'Report to Sachin Travels\' Tour Manager at Abu Road Railway Station. Proceed to Mount Abu. Hotel check-in.', highlights: ['Abu Road', 'Mount Abu'], stay: 'Mount Abu' },
       { day: 'Day 2', title: 'Mount Abu Sightseeing (3,960 ft)', details: 'After breakfast, boating in Nakki Lake. Visit Brahmakumari Ashram, Arbuja Devi Temple, Dilwara Temple & Sunset Point.', highlights: ['Nakki Lake', 'Dilwara Temple', 'Sunset Point'], stay: 'Mount Abu' },
@@ -83,7 +111,7 @@ const TOURS = {
 
 export default function RajasthanPage() {
   const navigate = useNavigate();
-  const [activeItinerary, setActiveItinerary] = useState('full');
+  const [activeItinerary, setActiveItinerary] = useState('iconic');
 
   useEffect(() => { window.scrollTo(0, 0); }, []);
 
@@ -211,7 +239,7 @@ export default function RajasthanPage() {
               Itinerary
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[var(--brand-text-muted)] max-w-xl mx-auto mb-6">
-              Choose from three curated Rajasthan experiences.
+              Choose from five curated Rajasthan experiences.
             </p>
             <div className="inline-flex flex-wrap justify-center rounded-xl bg-white border border-[var(--brand-border)] p-1 gap-1" data-testid="raj-itinerary-toggle">
               {Object.entries(TOURS).map(([key, t]) => (
@@ -223,6 +251,7 @@ export default function RajasthanPage() {
                 >
                   <span className="block">{t.label}</span>
                   <span className="block text-[10px] opacity-70">{t.sublabel}</span>
+                  {t.price && <span className="block text-[10px] font-bold text-amber-300">{t.price}</span>}
                 </button>
               ))}
             </div>

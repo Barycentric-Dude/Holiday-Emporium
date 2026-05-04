@@ -14,6 +14,8 @@ const INTERNATIONAL_TOURS = [
   { label: 'Bangkok Malaysia Singapore', href: '/tours/bangkok-malaysia-singapore' },
   { label: 'Dubai', href: '/tours/dubai' },
   { label: 'Sri Lanka With Maldives', href: '/tours/sri-lanka-maldives' },
+  { label: 'Best of Bali', href: '/tours/bali' },
+  { label: 'Vietnam', href: '/tours/vietnam' },
 ];
 
 const NAV_LINKS = [

@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Compass, Mountain, Sparkles } from 'lucide-react';
 
-const HERO_SPIRITUAL = "https://static.prod-images.emergentagent.com/jobs/12736aef-be45-437d-8d0e-4ed5d086849e/images/e3fb3cd48ef1b7b5f70423c87563a6e33d6547938ffbb24d831f38fdf3f5cb28.png";
-const HERO_ADVENTURE = "https://static.prod-images.emergentagent.com/jobs/12736aef-be45-437d-8d0e-4ed5d086849e/images/8960f6c25825394df05b8b2b3c5773bcc747738318dbbf3fe4955771eb28c110.png";
+const HERO_SPIRITUAL = "https://images.unsplash.com/photo-1589346937506-af86b230e465?auto=format&fit=crop&w=1920&q=80";
+const HERO_ADVENTURE = "https://images.unsplash.com/photo-1770346705591-c92899dcf1f3?auto=format&fit=crop&w=1920&q=80";
 
 const MODES = [
   {
